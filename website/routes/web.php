@@ -15,4 +15,14 @@ Route::get('/', 'PagesController@index');
 
 Route::get('/welcome', 'PagesController@index');
 
-Route::resource('/player/indexplayer', 'PlayerController');
+Route::resource('/player/index', 'PlayerController');
+
+Route::resource('/team/index', 'TeamController');
+
+Route::resource('/tournament/index', 'TournamentController');
+
+Route::resource('/competition/index', 'CompetitionController');
+
+Route::resource('/schedule/index', 'ScheduleController');
+
+Route::resource('/award/index', 'AwardController');
