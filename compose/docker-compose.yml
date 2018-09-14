@@ -1,0 +1,42 @@
+version: '3'
+services:
+  db:
+    image: mariadb:10.2
+    volumes:
+      - "./data/db:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: web
+      MYSQL_USER: web
+      MYSQL_PASSWORD: datapw
+
+  redis:
+    image: redis:3.2-alpine
+
+  nginx:
+    image: nginx:alpine
+    links:
+      - fpm:fpm
+    ports:
+      - 8080:80
+    volumes:
+      - "../website:/var/www/html"
+      - "./config/nginx.conf:/etc/nginx/conf.d/default.conf"
+    environment:
+        WEBROOT: "/var/www/html"
+
+  fpm:
+    build: ./fpm
+    links:
+      - db:db
+      - redis:redis
+    volumes:
+      - "../website:/var/www/html"
+      - "./config/php.ini:/usr/local/etc/php/php.ini"
+
+  pma:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+        - "8000:80"
