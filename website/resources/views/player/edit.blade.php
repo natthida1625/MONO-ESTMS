@@ -1,0 +1,78 @@
+@extends('layout.page')
+
+@section('content') 
+<div class="container">
+  <form method="post" action="{{action('PlayerController@update' , ['id'])}}" enctype="multipart/form-data">
+    @csrf
+    <h4>Edit Player</h4>
+    <input name="id" type="hidden" value="">
+    <input name="_method" type="hidden" value="PATCH">
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="name">Firstname:</label>
+            <input type="text" class="form-control" name="product_name" value="">
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="name">Lastname:</label>
+            <input type="text" class="form-control" name="product_name" value="">
+        </div>
+    </div>
+   
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="name">Birthday:</label>
+            <input type="text" class="form-control" name="product_name" value="">
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="name">Character name:</label>
+            <input type="text" class="form-control" name="product_name" value="">
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="description">Description:</label>
+              <textarea class="form-control" name="product_description" type="textarea" maxlength="140" rows="7"></textarea>
+        </div>
+    </div>    
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="category">Team :</label>
+          <select name="category_id">
+                    <option value=" "></option>                          
+                </select>     
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="images">Images :</label>
+            <input type="file" class="form-control" name="file" value="">
+        </div>
+    </div> 
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4" style="margin-top:60px">
+          <button type="submit" class="btn btn-success" style="margin-left:38px">Save</button>
+        </div>
+    </div>
+     
+  </form>
+</div>      
+@endsection        

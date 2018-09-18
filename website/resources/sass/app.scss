@@ -13,9 +13,11 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-body {
-  padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+.fakeimg {
+  height: 200px;
+  background: #aaa;
 }
+
 
 .red{
 color:red;
@@ -42,8 +44,8 @@ display: block;
 background: #EDEFF1;
 height: auto;
 padding-bottom: 30px;
-position: relative;
-width: 100%;
+position: fixed;
+width: 50%;
 border-bottom: 1px solid #CCCCCC;
 border-top: 1px solid #DDDDDD;
 }

@@ -23,7 +23,7 @@ class AwardController extends Controller
      */
     public function create()
     {
-        //
+        return view('award.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class AwardController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('award.edit');
     }
 
     /**

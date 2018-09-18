@@ -23,7 +23,7 @@ class TeamController extends Controller
      */
     public function create()
     {
-        //
+        return view('team.create');    
     }
 
     /**
@@ -56,7 +56,7 @@ class TeamController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('team.edit'); 
     }
 
     /**

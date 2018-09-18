@@ -9,18 +9,15 @@
   @endif
      
   <table class="table table-striped">
-  <h4>Players List</h4>
-  <a href="{{ action('PlayerController@create')}}">Create Player </a><br /><br /> 
+  <h4>Tournaments List</h4>
+  <a href="{{ action('TournamentController@create')}}">Create Tournament </a><br /><br /> 
     <thead>
       <tr>
         <th>Images</th>     
         <th>ID</th>      
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Birthday</th>
-        <th>Character Name</th>
+        <th>Title</th>
         <th>Description</th>
-        <th>Team</th>
+        <th>Game title</th>
         <th colspan="2">Action</th>
       </tr>
     </thead>
@@ -30,13 +27,10 @@
       <td></td>
       <td></td>  
       <td></td>
-      <td></td> 
       <td></td>
-      <td></td>
-      <td></td>
-      <td><a href="{{ action('PlayerController@edit', ['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
+      <td><a href="{{ action('TournamentController@edit', ['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
-        <form method="post" action="{{action('PlayerController@destroy', ['id'])}}">
+        <form method="post" action="{{action('TournamentController@destroy', ['id'])}}">
         @csrf
           <input name="_method" type="hidden" value="DELETE">
           <button class="btn btn-danger" type="submit">Delete</button>

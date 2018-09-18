@@ -25,8 +25,8 @@ class PlayerController extends Controller
      */
     public function create()
     {
-        //
-    }
+        return view('player.create');    
+    }    
 
     /**
      * Store a newly created resource in storage.
@@ -58,7 +58,7 @@ class PlayerController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('player.edit');    
     }
 
     /**

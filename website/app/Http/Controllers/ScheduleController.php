@@ -13,7 +13,8 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        return view('schedule.index');    }
+        return view('schedule.index');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -22,7 +23,7 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        //
+        return view('schedule.create');
     }
 
     /**
@@ -55,7 +56,7 @@ class ScheduleController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('schedule.edit');
     }
 
     /**

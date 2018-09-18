@@ -23,7 +23,7 @@ class TournamentController extends Controller
      */
     public function create()
     {
-        //
+        return view('tournament.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class TournamentController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('tournament.edit');
     }
 
     /**
