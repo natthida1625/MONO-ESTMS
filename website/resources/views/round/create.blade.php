@@ -15,7 +15,7 @@
 
     <form method="post" action="{{ url('product') }}" enctype="multipart/form-data">
     @csrf
-    <h4>Create Competition</h4>
+    <h4>Create Round</h4>
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4 {{ $errors->has('product_name') ? 'has-error' : '' }}">

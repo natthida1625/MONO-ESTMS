@@ -20,7 +20,7 @@
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4 {{ $errors->has('product_name') ? 'has-error' : '' }}">
-          <label class="control-label" for="name">Team name:</label>
+          <label class="control-label" for="name">Name:</label>
           <input type="text" class="form-control" name="product_name" value="{{ isset($data) ? old('product_name',$data->product_name) : old('product_name') }}">
           @if($errors->has('product_name'))
             <span class="help-block">{{ $errors->first('product_name') }}</span>
@@ -37,28 +37,7 @@
             <span class="help-block">{{ $errors->first('product_description') }}</span>
           @endif
         </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('categories') ? 'has-error' : '' }}">
-          <label class="checkbox" for="category">Tournament :</label>
-                <select name="category_id">
-                    <option value=" "></option>                          
-                </select>          
-        </div>                
-    </div>  
-
-    <div class="row">
-      <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_name') ? 'has-error' : '' }}">
-          <label class="control-label" for="name">Player:</label>
-          <input type="text" class="form-control" name="product_name" value="{{ isset($data) ? old('product_name',$data->product_name) : old('product_name') }}">
-          @if($errors->has('product_name'))
-            <span class="help-block">{{ $errors->first('product_name') }}</span>
-          @endif
-        </div>
-    </div>
+    </div> 
 
     <div class="row">      
       <div class="col-md-4"></div>

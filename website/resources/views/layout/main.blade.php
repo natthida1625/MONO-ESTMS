@@ -26,24 +26,24 @@
           <li class="nav-item active">
         		<a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
       		</li>
-      		<li class="nav-item">
+          <li class="nav-item">
         		<a class="nav-link" href="{{ url('/player/index') }}">Player</a>
 	  		  </li>
-	  		  <li class="nav-item">
+					<li class="nav-item">
         		<a class="nav-link" href="{{ url('/team/index') }}">Team</a>
 	  		  </li>
-					<li class="nav-item">
+      		<li class="nav-item">
         		<a class="nav-link" href="{{ url('/tournament/index') }}">Tournament</a>
 	  		  </li>
 	  		  <li class="nav-item">
-        		<a class="nav-link" href="{{ url('/competition/index') }}">Competition</a>
+        		<a class="nav-link" href="{{ url('/round/index') }}">Round</a>
 	  		  </li>
       		<li class="nav-item">
         		<a class="nav-link" href="{{ url('/schedule/index') }}">Schedule</a>
 	  		  </li>
-      		<li class="nav-item">
+      		<!-- <li class="nav-item">
         		<a class="nav-link" href="{{ url('/award/index') }}">Award</a>
-      		</li>
+      		</li> -->
     	</ul>
     <form class="form-inline my-2 my-lg-0">
       	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

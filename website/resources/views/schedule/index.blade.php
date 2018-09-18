@@ -13,11 +13,9 @@
   <a href="{{ action('ScheduleController@create')}}">Create schedule </a><br /><br /> 
     <thead>
       <tr>
-        <th>Date</th>      
-        <th>Team</th>
-        <th>Score line</th>
-        <th>Competition status</th>
-        <th>Competition</th>
+        <th>Schedule_ID</th>      
+        <th>Round_ID</th>
+        <th>Schedule_Date</th>
         <th colspan="2">Action</th>
       </tr>
     </thead>
@@ -25,9 +23,7 @@
     <tr>
       <td></td>          
       <td></td>
-      <td></td>
-      <td></td>  
-      <td></td>  
+      <td></td>    
       <td><a href="{{ action('ScheduleController@edit', ['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
         <form method="post" action="{{action('ScheduleController@destroy', ['id'])}}">

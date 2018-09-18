@@ -15,10 +15,10 @@
       <tr>
         <th>Images</th>     
         <th>ID</th>      
-        <th>Team name</th>
+        <th>Name</th>
         <th>Description</th>
-        <th>Tournament</th>
         <th colspan="2">Action</th>
+        <th>Player</th> 
       </tr>
     </thead>
     <tbody>     
@@ -26,7 +26,6 @@
       <td></td>          
       <td></td>
       <td></td>  
-      <td></td>
       <td></td>
       <td><a href="{{ action('TeamController@edit', ['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
@@ -36,6 +35,7 @@
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
       </td>
+      <td><a href="{{ action('PlayerController@index')}}" class="btn btn-dark">Add Player</a></td>
     </tr>
     </tbody>
 

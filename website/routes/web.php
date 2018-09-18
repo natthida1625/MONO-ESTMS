@@ -21,7 +21,7 @@ Route::resource('/team/index', 'TeamController');
 
 Route::resource('/tournament/index', 'TournamentController');
 
-Route::resource('/competition/index', 'CompetitionController');
+Route::resource('/round/index', 'RoundController');
 
 Route::resource('/schedule/index', 'ScheduleController');
 

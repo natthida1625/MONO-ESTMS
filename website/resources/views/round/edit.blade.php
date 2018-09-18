@@ -2,9 +2,9 @@
 
 @section('content') 
 <div class="container">
-  <form method="post" action="{{action('CompetitionController@update' , ['id'])}}" enctype="multipart/form-data">
+  <form method="post" action="{{action('RoundController@update' , ['id'])}}" enctype="multipart/form-data">
     @csrf
-    <h4>Edit Competition</h4>
+    <h4>Edit Round</h4>
     <input name="id" type="hidden" value="">
     <input name="_method" type="hidden" value="PATCH">
 

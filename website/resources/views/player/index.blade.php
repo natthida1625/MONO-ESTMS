@@ -20,7 +20,6 @@
         <th>Birthday</th>
         <th>Character Name</th>
         <th>Description</th>
-        <th>Team</th>
         <th colspan="2">Action</th>
       </tr>
     </thead>
@@ -31,7 +30,6 @@
       <td></td>  
       <td></td>
       <td></td> 
-      <td></td>
       <td></td>
       <td></td>
       <td><a href="{{ action('PlayerController@edit', ['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
