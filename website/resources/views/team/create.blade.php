@@ -2,7 +2,7 @@
 
 @section('content')    
 <div class="container">
-    @if (count($errors) > 0)
+    <!-- @if (count($errors) > 0)
     <div class="alert alert-danger">
       <strong>Whoops!</strong> There were some problems with your input.<br><br>
       <ul>
@@ -11,41 +11,41 @@
         @endforeach
       </ul>
     </div>
-    @endif
+    @endif -->
 
-    <form method="post" action="{{ url('product') }}" enctype="multipart/form-data">
+    <form method="post" action="{{ url('team/index') }}" enctype="multipart/form-data">
     @csrf
     <h4>Create New Team</h4>
 
     <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_name') ? 'has-error' : '' }}">
+        <div class="form-group col-md-4">
           <label class="control-label" for="name">Name:</label>
-          <input type="text" class="form-control" name="product_name" value="{{ isset($data) ? old('product_name',$data->product_name) : old('product_name') }}">
-          @if($errors->has('product_name'))
-            <span class="help-block">{{ $errors->first('product_name') }}</span>
+          <input type="text" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" value="{{ isset($data) ? old('name',$data->product_name) : old('name') }}">
+          @if($errors->has('name'))
+            <span class="invalid-feedback">กรุณากรอกชื่อของคุณ</span>
           @endif
         </div>
     </div>
 
     <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_description') ? 'has-error' : '' }}">
+        <div class="form-group col-md-4">
           <label class="control-label" for="description">Description:</label>
-          <textarea class="form-control" name="product_description" value="{{ isset($data) ? old('product_description',$data->product_description) : old('product_description') }}" type="textarea" maxlength="140" rows="7"></textarea>
-          @if($errors->has('product_description'))
-            <span class="help-block">{{ $errors->first('product_description') }}</span>
+          <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" value="{{ isset($data) ? old('description',$data->description) : old('description') }}" type="textarea" maxlength="140" rows="7"></textarea>
+          @if($errors->has('description'))
+            <span class="invalid-feedback">กรุณาใส่รายละเอียดเกี่ยวกับทีมของคุณ</span>
           @endif
         </div>
     </div> 
 
     <div class="row">      
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('file') ? 'has-error' : '' }}">
+        <div class="form-group col-md-4">
           <label class="control-label" for="images">Images :</label>
-          <input type="file" id="file" class="form-control" name="file" value="{{ isset($data) ? old('file',$data->file) : old('file') }}"> 
+          <input type="file" id="file" class="form-control {{ $errors->has('file') ? 'is-invalid' : '' }}" name="file" value="{{ isset($data) ? old('file',$data->file) : old('file') }}"> 
           @if($errors->has('file'))
-            <span class="help-block">{{ $errors->first('file') }}</span>
+            <span class="invalid-feedback">กรุณาเลือกรูปโปรไฟล์ของคุณ</span>
           @endif
       </div>
     </div> 

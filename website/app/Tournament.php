@@ -9,6 +9,8 @@ use App\Round;
 
 class Tournament extends Model
 {
+    protected $fillable = ['title', 'description'];
+
     public function teams()
     {
         return $this->belongsToMany('App\Team');

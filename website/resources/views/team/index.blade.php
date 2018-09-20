@@ -20,16 +20,17 @@
         <th colspan="2">Action</th>
         <th>Player</th> 
       </tr>
-    </thead>
-    <tbody>     
+      </thead>
+    <tbody>
+    @foreach($teams as $team)
     <tr>
-      <td></td>          
-      <td></td>
-      <td></td>  
-      <td></td>
-      <td><a href="{{ action('TeamController@edit', ['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
+      <td><img src="{{ asset('storage/'.$team->file) }}" width="240px" height="250px"></td>          
+      <td>{{ $team->id}}</td>
+      <td>{{ $team->name}}</td>  
+      <td>{{ $team->description}}</td>
+      <td><a href="{{ action('TeamController@edit', $team['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
-        <form method="post" action="{{action('TeamController@destroy', ['id'])}}">
+        <form method="post" action="{{action('TeamController@destroy', $team['id'])}}">
         @csrf
           <input name="_method" type="hidden" value="DELETE">
           <button class="btn btn-danger" type="submit">Delete</button>
@@ -37,6 +38,7 @@
       </td>
       <td><a href="{{ action('PlayerController@index')}}" class="btn btn-dark">Add Player</a></td>
     </tr>
+    @endforeach
     </tbody>
 
 </table>

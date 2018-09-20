@@ -2,17 +2,17 @@
 
 @section('content') 
 <div class="container">
-  <form method="post" action="{{action('TournamentController@update' , ['id'])}}" enctype="multipart/form-data">
+  <form method="post" action="{{action('TournamentController@update' , $id)}}" enctype="multipart/form-data">
     @csrf
     <h4>Edit Tournament</h4>
-    <input name="id" type="hidden" value="">
+    <input name="id" type="hidden" value="{{ $tournament->id }}">
     <input name="_method" type="hidden" value="PATCH">
 
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label for="name">Title:</label>
-            <input type="text" class="form-control" name="product_name" value="">
+          <label for="title">Title:</label>
+            <input type="text" class="form-control" name="title" value="{{ $tournament->title }}">
         </div>
     </div>
 
@@ -20,7 +20,7 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label for="description">Description:</label>
-              <textarea class="form-control" name="product_description" type="textarea" maxlength="140" rows="7"></textarea>
+              <textarea class="form-control" name="description" type="textarea" rows="7" cols="50">{{ $tournament->description }}</textarea>
         </div>
     </div>
        
@@ -28,7 +28,7 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label for="images">Images :</label>
-            <input type="file" class="form-control" name="file" value="">
+            <input type="file" class="form-control" name="file" value="{{ $tournament->file }}">
         </div>
     </div> 
 

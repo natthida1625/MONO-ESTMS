@@ -9,6 +9,8 @@ use App\Schedule;
 
 class Team extends Model
 {
+    protected $fillable = ['name', 'description', 'file'];
+
     public function players()
     {
         return $this->belongsToMany('App\Player');

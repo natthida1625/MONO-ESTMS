@@ -8,6 +8,8 @@ use App\Schedule;
 
 class Round extends Model
 {
+    protected $fillable = ['title', 'round_number'];
+
     public function tournament()
     {
         return $this->belongsTo('App\Tournament');

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Tournament;
 
 class TournamentController extends Controller
 {
@@ -13,7 +15,8 @@ class TournamentController extends Controller
      */
     public function index()
     {
-        return view('tournament.index');
+        $tournaments = \App\Tournament::all();
+        return view('tournament.index', compact('tournaments'));
     }
 
     /**
@@ -34,7 +37,30 @@ class TournamentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'file' => 'required'
+        ],[
+             // 'required' => 'กรุณากรอก :attribute',
+            // 'numeric' => 'กรุณากรอก :attribute เป็นตัวเลข',
+
+        ]);
+
+        $tournament =  new Tournament;
+        $tournament->title = $request->input('title');       
+        $tournament->description = $request->input('description');
+        $tournament->save();
+    
+        $upload_req = $request->file('file');
+        $extension = $upload_req->extension();
+        $basefilename = 'files/'.str_random(32);
+        $filename = $basefilename.'.'.$extension;
+        $request->file('file')->storeAs('public', $filename);    
+        $tournament->file = $filename;
+        $tournament->save();
+
+        return redirect('tournament/index')->with('success', 'Information has been added');  
     }
 
     /**
@@ -56,7 +82,8 @@ class TournamentController extends Controller
      */
     public function edit($id)
     {
-        return view('tournament.edit');
+        $tournament = \App\Tournament::find($id);
+        return view('tournament.edit',compact('tournament','id'));
     }
 
     /**
@@ -68,7 +95,22 @@ class TournamentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        unset($data['_token']);
+        unset($data['_method']);
+
+        $tournament = Tournament::find($id);
+        $old_file = $tournament->file;
+        $tournament->update($data);
+        $upload_req = $request->file('file');
+        $extension = $upload_req->extension();
+        $basefilename = 'files/'.str_random(32);
+        $filename = $basefilename.'.'.$extension;
+        $request->file('file')->storeAs('public', $filename);
+        Storage::disk('public')->delete($old_file); 
+        $tournament->file = $filename; 
+        $tournament->save();    
+        return redirect('tournament/index');   
     }
 
     /**
@@ -79,6 +121,8 @@ class TournamentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tournaments = \App\Tournament::find($id);
+        $tournaments->delete();
+        return redirect('tournament/index')->with('success','Information has been  deleted');    
     }
 }

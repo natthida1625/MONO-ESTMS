@@ -17,12 +17,12 @@ Route::get('/welcome', 'PagesController@index');
 
 Route::resource('player/index', 'PlayerController');
 
-Route::resource('/team/index', 'TeamController');
+Route::resource('team/index', 'TeamController');
 
-Route::resource('/tournament/index', 'TournamentController');
+Route::resource('tournament/index', 'TournamentController');
 
-Route::resource('/round/index', 'RoundController');
+Route::resource('round/index', 'RoundController');
 
-Route::resource('/schedule/index', 'ScheduleController');
+Route::resource('schedule/index', 'ScheduleController');
 
-Route::resource('/award/index', 'AwardController');
+Route::resource('award/index', 'AwardController');

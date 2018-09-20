@@ -9,6 +9,8 @@ use App\Round;
 
 class Schedule extends Model
 {
+    protected $fillable = ['schedule_date'];
+
     public function teams()
     {
         return $this->belongsToMany('App\Team');

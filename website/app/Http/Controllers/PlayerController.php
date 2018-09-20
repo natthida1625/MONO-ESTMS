@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Player;
 
 
 class PlayerController extends Controller
@@ -15,7 +16,8 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        return view('player.index');
+        $players = \App\Player::all();
+        return view('player.index', compact('players'));
     }
 
     /**
@@ -36,7 +38,37 @@ class PlayerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'birthday' => 'required',
+            'charactername' => 'required',
+            'description' => 'required',
+            'file' => 'required'
+        ],[
+             // 'required' => 'กรุณากรอก :attribute',
+            // 'numeric' => 'กรุณากรอก :attribute เป็นตัวเลข',
+
+        ]);
+
+        $player =  new Player;
+        $player->firstname = $request->input('firstname');
+        $player->lastname = $request->input('lastname');
+        $player->birthday = $request->input('birthday');
+        $player->charactername = $request->input('charactername');
+        $player->description = $request->input('description');
+        $player->save();
+    
+        $upload_req = $request->file('file');
+        $extension = $upload_req->extension();
+        $basefilename = 'files/'.str_random(32);
+        $filename = $basefilename.'.'.$extension;
+        $request->file('file')->storeAs('public', $filename);    
+        $player->file = $filename;
+        $player->save();
+
+        return redirect('player/index')->with('success', 'Information has been added');
+
     }
 
     /**
@@ -47,7 +79,7 @@ class PlayerController extends Controller
      */
     public function show($id)
     {
-        //
+       //
     }
 
     /**
@@ -58,7 +90,8 @@ class PlayerController extends Controller
      */
     public function edit($id)
     {
-        return view('player.edit');    
+        $player = \App\Player::find($id);
+        return view('player.edit',compact('player','id'));
     }
 
     /**
@@ -70,7 +103,23 @@ class PlayerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        unset($data['_token']);
+        unset($data['_method']);
+
+        $player = Player::find($id);
+        $old_file = $player->file;
+        $player->update($data);
+        $upload_req = $request->file('file');
+        $extension = $upload_req->extension();
+        $basefilename = 'files/'.str_random(32);
+        $filename = $basefilename.'.'.$extension;
+        $request->file('file')->storeAs('public', $filename);
+        Storage::disk('public')->delete($old_file); 
+        $player->file = $filename; 
+        $player->save();    
+        return redirect('player/index'); 
+    
     }
 
     /**
@@ -81,6 +130,8 @@ class PlayerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $players = \App\Player::find($id);
+        $players->delete();
+        return redirect('player/index')->with('success','Information has been  deleted');
     }
 }

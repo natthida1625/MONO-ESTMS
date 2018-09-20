@@ -19,18 +19,18 @@
         <th>Description</th>
         <th colspan="2">Action</th>
         <th>Team</th>
-
       </tr>
     </thead>
     <tbody>     
+    @foreach($tournaments as $tournament)
     <tr>
-      <td></td>          
-      <td></td>
-      <td></td>  
-      <td></td>
-      <td><a href="{{ action('TournamentController@edit', ['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
+      <td><img src="{{ asset('storage/'.$tournament->file) }}" width="420px" height="250px"></td>          
+      <td>{{ $tournament->id}}</td>
+      <td>{{ $tournament->title}}</td>  
+      <td>{{ $tournament->description}}</td>
+      <td><a href="{{ action('TournamentController@edit', $tournament['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
-        <form method="post" action="{{action('TournamentController@destroy', ['id'])}}">
+        <form method="post" action="{{action('TournamentController@destroy', $tournament['id'])}}">
         @csrf
           <input name="_method" type="hidden" value="DELETE">
           <button class="btn btn-danger" type="submit">Delete</button>
@@ -38,6 +38,7 @@
       </td>
       <td><a href="{{ action('TeamController@index')}}" class="btn btn-dark">Add Team</a></td>
     </tr>
+    @endforeach
     </tbody>
 
 </table>
