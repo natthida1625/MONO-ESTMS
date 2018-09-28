@@ -11,41 +11,14 @@
 
 <div class="jumbotron text-center" style="margin-bottom:0">
 	<h1>Header</h1>
-  	<p>Resize this responsive page to see the effect!</p> 
+    <p>Resize this responsive page to see the effect!</p> 
+    <!-- <img class="navbar-logo" src="{{ asset('asset/img/') }}"> -->
+
 </div>
-
-<div class="topbar">
-				<div class="topbar-social">
-					<a href="#" class="topbar-social-item fa fa-facebook"></a>
-					<a href="#" class="topbar-social-item fa fa-instagram"></a>
-					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
-				</div>
-
-				<span class="topbar-child1">
-					Free shipping for standard order over $100
-				</span>
-
-				<div class="topbar-child2">
-					<span class="topbar-email">
-						fashe@example.com
-					</span>
-
-					<div class="topbar-language rs1-select2">
-						<select class="selection-1" name="time">
-							<option>USD</option>
-							<option>EUR</option>
-						</select>
-					</div>
-				</div>
-      </div>
-</div>
-
-      
+    
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand" href="#">Games</a>
+  <img class="navbar-logo" href="#" src="{{ asset('asset/img/logo_en.png') }}">
   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon"></span>
   	</button>
@@ -70,9 +43,9 @@
       		<li class="nav-item">
         		<a class="nav-link" href="{{ url('/schedule/index') }}">Schedule</a>
 	  		  </li>
-      		<!-- <li class="nav-item">
+      		<li class="nav-item">
         		<a class="nav-link" href="{{ url('/award/index') }}">Award</a>
-      		</li> -->
+      		</li>
     	</ul>
     <form class="form-inline my-2 my-lg-0">
       	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -81,6 +54,38 @@
   </div>
 </nav>
 <!-- /.navbar -->
+
+<!-- slide bar -->
+<div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{{ asset('asset/img/.jpg') }}" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{ asset('asset/img/.jpg') }}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{ asset('asset/img/.jpg') }}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<!-- slide bar -->
+
 
 <!-- main-content -->
 <div class="container" style="margin-top:30px">
