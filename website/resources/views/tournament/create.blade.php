@@ -1,19 +1,8 @@
 @extends('layout.page')
 
 @section('content')    
-<div class="container">
-    <!-- @if (count($errors) > 0)
-    <div class="alert alert-danger">
-      <strong>Whoops!</strong> There were some problems with your input.<br><br>
-      <ul>
-        @foreach ($errors->all() as $error)
-          <li>{{ $error }}</li>
-        @endforeach
-      </ul>
-    </div>
-    @endif -->
-
-    <form method="post" action="{{ url('tournament/index') }}" enctype="multipart/form-data">
+<div class="container"><br />
+  <form method="post" action="{{ url('tournament/index') }}" enctype="multipart/form-data">
     @csrf
     <h4>Create New Tournament</h4>
 
@@ -37,6 +26,25 @@
           <span class="invalid-feedback">กรุณาใส่รายละเอียดเกี่ยวกับการแข่งขัน</span>
           @endif
         </div>
+    </div> 
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4 {{ $errors->has('categories') ? 'has-error' : '' }}">
+          <label class="control-label" for="team">team :</label>                    
+          <div>
+            @foreach($teams as $team)    
+            <input type="checkbox" name="teams[]" value="{{ $team->id }}">{{ $team->name }}  
+            @if(isset($data))
+            <input type="hidden" id="id" name="id" value="{{ $team->id  }}"> 
+            @endif
+            <br />                           
+            @endforeach
+          </div>       
+            @if($errors->has('teams'))
+              <span class="help-block">{{ $errors->first('teams') }}</span>
+            @endif
+        </div>                
     </div> 
 
     <div class="row">      

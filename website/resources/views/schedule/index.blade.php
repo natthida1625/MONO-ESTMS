@@ -13,26 +13,44 @@
   <a href="{{ action('ScheduleController@create')}}">Create schedule </a><br /><br /> 
     <thead>
       <tr>
-        <th>Schedule_ID</th>      
-        <th>Round_ID</th>
-        <th>Schedule_Date</th>
-        <th colspan="2">Action</th>
+        <th>ID</th>             
+        <th>Date</th>
+        <th>Time</th>
+        <th>Round</th>
+        <th>Tournament</th>
+        <th>Blue Team</th>
+        <th>Score</th>
+        <th></th>
+        <th>Score</th>
+        <th>Red Team</th>
+        <th>Win Team</th> 
+        <th colspan="2"></th>
       </tr>
     </thead>
-    <tbody>     
+    <tbody> 
+    @foreach($schedules as $schedule)
     <tr>
-      <td></td>          
-      <td></td>
-      <td></td>    
-      <td><a href="{{ action('ScheduleController@edit', ['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
+      <td>{{ $schedule->id }}</td> 
+      <td>{{ $schedule->date }}</td>     
+      <td>{{ $schedule->time }}</td>
+      <td>{{ $schedule->round->title }}</td>
+      <td>{{ $schedule->tournament->title }}</td>
+      <td>{{ $schedule->id }}</td>
+      <td>{{ $schedule->id }}</td> 
+      <td>-</td> 
+      <td>{{ $schedule->id }}</td> 
+      <td>{{ $schedule->id }}</td> 
+      <td>{{ $schedule->id }}</td> 
+      <td><a href="{{ action('ScheduleController@edit', $schedule['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
-        <form method="post" action="{{action('ScheduleController@destroy', ['id'])}}">
+        <form method="post" action="{{action('ScheduleController@destroy', $schedule['id'])}}">
         @csrf
           <input name="_method" type="hidden" value="DELETE">
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
       </td>
     </tr>
+    @endforeach
     </tbody>
 
 </table>

@@ -17,14 +17,13 @@
         <th>ID</th>      
         <th>Name</th>
         <th>Description</th>
-        <th colspan="2">Action</th>
-        <th>Player</th> 
+        <th colspan="2"></th>
       </tr>
       </thead>
     <tbody>
     @foreach($teams as $team)
     <tr>
-      <td><img src="{{ asset('storage/'.$team->file) }}" width="240px" height="250px"></td>          
+      <td><img src="{{ asset('storage/'.$team->file) }}" width="150px" height="150px"></td>          
       <td>{{ $team->id}}</td>
       <td>{{ $team->name}}</td>  
       <td>{{ $team->description}}</td>
@@ -36,7 +35,6 @@
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
       </td>
-      <td><a href="{{ action('PlayerController@index')}}" class="btn btn-dark">Add Player</a></td>
     </tr>
     @endforeach
     </tbody>

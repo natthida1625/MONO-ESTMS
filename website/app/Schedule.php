@@ -9,7 +9,7 @@ use App\Round;
 
 class Schedule extends Model
 {
-    protected $fillable = ['schedule_date'];
+    protected $fillable = ['tournament_id', 'round_id', 'date', 'time'];
 
     public function teams()
     {

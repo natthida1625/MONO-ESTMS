@@ -16,25 +16,26 @@
         <th>ID</th>      
         <th>Title</th>
         <th>Description</th>
-        <th colspan="2">Action</th>
+        <th colspan="2"></th>
       </tr>
     </thead>
     <tbody>     
-    <tr>
-      <td></td>          
-      <td></td>
-      <td></td>  
-      <td><a href="{{ action('AwardController@edit', ['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
+    @foreach($awards as $award)
+    <tr>             
+      <td>{{ $award->id}}</td>
+      <td>{{ $award->title}}</td>  
+      <td>{{ $award->description}}</td>
+      <td><a href="{{ action('AwardController@edit', $award['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
-        <form method="post" action="{{action('AwardController@destroy', ['id'])}}">
+        <form method="post" action="{{action('AwardController@destroy', $award['id'])}}">
         @csrf
           <input name="_method" type="hidden" value="DELETE">
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
       </td>
     </tr>
-    </tbody>
-
+    @endforeach
+    </tbody>    
 </table>
 </div>
 @endsection

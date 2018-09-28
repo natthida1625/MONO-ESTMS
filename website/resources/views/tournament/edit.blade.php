@@ -1,7 +1,7 @@
 @extends('layout.page')
 
 @section('content') 
-<div class="container">
+<div class="container"><br />
   <form method="post" action="{{action('TournamentController@update' , $id)}}" enctype="multipart/form-data">
     @csrf
     <h4>Edit Tournament</h4>
@@ -24,6 +24,19 @@
         </div>
     </div>
        
+    <div class="row">
+          <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+              <label for="team">Team :</label>
+                <div>
+                @foreach($teams as $team)    
+                  <input type="checkbox" name="teams[]" value="{{ $team->id }}" {{ in_array($team->id, $tournament_team) ? 'checked' : ''}}>{{ $team->name }}
+                  <br />
+                @endforeach
+                </div>   
+            </div>
+        </div>
+
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">

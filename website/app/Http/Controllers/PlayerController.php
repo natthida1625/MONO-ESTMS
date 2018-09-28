@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Player;
-
+use App\Team;
 
 class PlayerController extends Controller
 {
@@ -27,9 +27,17 @@ class PlayerController extends Controller
      */
     public function create()
     {
-        return view('player.create');    
+        $teams = Team::all();
+        return view('player.create', compact('teams'));    
     }    
-
+    
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $players = Player::where('firstname', 'like', '%' .$search. '%')
+             ->orwhere('lastname', 'like', '%' .$search. '%')->paginate(5);
+        return view('player/index',compact('search','players'));
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -44,19 +52,21 @@ class PlayerController extends Controller
             'birthday' => 'required',
             'charactername' => 'required',
             'description' => 'required',
+            'team_id' => 'required',
             'file' => 'required'
         ],[
              // 'required' => 'กรุณากรอก :attribute',
             // 'numeric' => 'กรุณากรอก :attribute เป็นตัวเลข',
 
         ]);
-
+        // dd($request->all());
         $player =  new Player;
         $player->firstname = $request->input('firstname');
         $player->lastname = $request->input('lastname');
         $player->birthday = $request->input('birthday');
         $player->charactername = $request->input('charactername');
-        $player->description = $request->input('description');
+        $player->description = $request->input('description');    
+        $player->team_id = $request->input('team_id');         
         $player->save();
     
         $upload_req = $request->file('file');
@@ -64,8 +74,9 @@ class PlayerController extends Controller
         $basefilename = 'files/'.str_random(32);
         $filename = $basefilename.'.'.$extension;
         $request->file('file')->storeAs('public', $filename);    
-        $player->file = $filename;
+        $player->file = $filename;        
         $player->save();
+        // dd($player->team->name);
 
         return redirect('player/index')->with('success', 'Information has been added');
 
@@ -91,7 +102,9 @@ class PlayerController extends Controller
     public function edit($id)
     {
         $player = \App\Player::find($id);
-        return view('player.edit',compact('player','id'));
+
+        $teams = Team::all();
+        return view('player.edit',compact('player', 'id', 'teams'));
     }
 
     /**
@@ -117,7 +130,8 @@ class PlayerController extends Controller
         $request->file('file')->storeAs('public', $filename);
         Storage::disk('public')->delete($old_file); 
         $player->file = $filename; 
-        $player->save();    
+        $player->save();
+        
         return redirect('player/index'); 
     
     }

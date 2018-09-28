@@ -11,12 +11,12 @@
 <body>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
-	<h1>My First Bootstrap 4 Page</h1>
+	<h1>Header</h1>
   	<p>Resize this responsive page to see the effect!</p> 
 </div>
 
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<a class="navbar-brand" href="#">Games</a>
   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon"></span>

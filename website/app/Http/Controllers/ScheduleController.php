@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
+use App\Schedule;
+use App\Tournament;
+use App\Round;
+use App\Team;
 
 class ScheduleController extends Controller
 {
@@ -15,7 +18,8 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        return view('schedule.index');
+        $schedules = \App\Schedule::all();
+        return view('schedule.index', compact('schedules'));
     }
 
     /**
@@ -25,7 +29,10 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        return view('schedule.create');
+        $teams = Team::all();
+        $tournaments = Tournament::all();
+        $rounds = Round::all();
+        return view('schedule.create', compact('teams', 'tournaments' ,'rounds'));   
     }
 
     /**
@@ -36,7 +43,37 @@ class ScheduleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [            
+            'date' => 'required',
+            'time' => 'required',            
+            'round_id' => 'required',
+            'tournament_id' => 'required',
+            'teams' => 'require'
+        ],[
+             // 'required' => 'กรุณากรอก :attribute',
+            // 'numeric' => 'กรุณากรอก :attribute เป็นตัวเลข',
+
+        ]);
+        // dd($request->all());
+        $teams = $request->input('teams');   
+        $schedule =  new Schedule;
+        $schedule->date = $request->input('date');       
+        $schedule->time = $request->input('time');  
+        $schedule->round_id = $request->input('round_id');       
+        $schedule->tournament_id = $request->input('tournament_id');
+        $schedule->save();
+    
+        // $upload_req = $request->file('file');
+        // $extension = $upload_req->extension();
+        // $basefilename = 'files/'.str_random(32);
+        // $filename = $basefilename.'.'.$extension;
+        // $request->file('file')->storeAs('public', $filename);    
+        // $schedule->file = $filename;        
+        // $schedule->save();
+        // dd($player->team->name);
+
+        $schedule->teams()->sync($teams);
+        return redirect('schedule/index')->with('success', 'Information has been added');
     }
 
     /**
@@ -58,7 +95,13 @@ class ScheduleController extends Controller
      */
     public function edit($id)
     {
-        return view('schedule.edit');
+        $schedule = \App\Schedule::find($id);
+        $schedule_team = $schedule->teams->pluck('id')->toArray();
+
+        $teams = Team::all();
+        $tournaments = Tournament::all();
+        $rounds = Round::all();
+        return view('schedule.edit',compact('schedule', 'id', 'tournaments', 'rounds'));    
     }
 
     /**
@@ -70,7 +113,25 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        unset($data['_token']);
+        unset($data['_method']);
+
+        $teams = $request->input('teams');
+        $schedule = Schedule::find($id);
+        // $old_file = $schedule->file;
+        $schedule->update($data);
+        // $upload_req = $request->file('file');
+        // $extension = $upload_req->extension();
+        // $basefilename = 'files/'.str_random(32);
+        // $filename = $basefilename.'.'.$extension;
+        // $request->file('file')->storeAs('public', $filename);
+        // Storage::disk('public')->delete($old_file); 
+        // $schedule->file = $filename; 
+        $schedule->save();
+
+        $schedule->teams()->sync($teams);
+        return redirect('schedule/index');     
     }
 
     /**
@@ -81,6 +142,9 @@ class ScheduleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $schedules = \App\Schedule::find($id);
+        $schedules->teams()->detach();
+        $schedules->delete();
+        return redirect('schedule/index')->with('success','Information has been  deleted');
     }
 }

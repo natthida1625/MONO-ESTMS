@@ -1,8 +1,8 @@
 @extends('layout.page')
 
 @section('content') 
-<div class="container">
-  <form method="post" action="{{action('PlayerController@update' , ['id'])}}" enctype="multipart/form-data">
+<div class="container"><br />
+  <form method="post" action="{{action('AwardController@update' , $id)}}" enctype="multipart/form-data">
     @csrf
     <h4>Edit Award</h4>
     <input name="id" type="hidden" value="">
@@ -11,8 +11,8 @@
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label for="name">Title:</label>
-            <input type="text" class="form-control" name="product_name" value="">
+          <label for="title">Title:</label>
+            <input type="text" class="form-control" name="title" value="{{ $award->title }}">
         </div>
     </div>
 
@@ -20,7 +20,7 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label for="description">Description:</label>
-              <textarea class="form-control" name="product_description" type="textarea" maxlength="140" rows="7"></textarea>
+              <textarea class="form-control" name="description" type="textarea" maxlength="140" rows="7">{{ $award->description }}</textarea>
         </div>
     </div>    
 

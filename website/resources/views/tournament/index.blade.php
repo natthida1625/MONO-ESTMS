@@ -17,8 +17,7 @@
         <th>ID</th>      
         <th>Title</th>
         <th>Description</th>
-        <th colspan="2">Action</th>
-        <th>Team</th>
+        <th colspan="2"></th>
       </tr>
     </thead>
     <tbody>     
@@ -27,7 +26,7 @@
       <td><img src="{{ asset('storage/'.$tournament->file) }}" width="420px" height="250px"></td>          
       <td>{{ $tournament->id}}</td>
       <td>{{ $tournament->title}}</td>  
-      <td>{{ $tournament->description}}</td>
+      <td>{{ $tournament->description}}</td>     
       <td><a href="{{ action('TournamentController@edit', $tournament['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
         <form method="post" action="{{action('TournamentController@destroy', $tournament['id'])}}">
@@ -36,7 +35,6 @@
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
       </td>
-      <td><a href="{{ action('TeamController@index')}}" class="btn btn-dark">Add Team</a></td>
     </tr>
     @endforeach
     </tbody>

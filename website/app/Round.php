@@ -8,7 +8,7 @@ use App\Schedule;
 
 class Round extends Model
 {
-    protected $fillable = ['title', 'round_number'];
+    protected $fillable = ['tournament_id', 'title', 'round_number'];
 
     public function tournament()
     {

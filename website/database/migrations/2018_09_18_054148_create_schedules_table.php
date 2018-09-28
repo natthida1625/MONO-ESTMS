@@ -15,7 +15,10 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('schedule_date');
+            $table->integer('tournament_id')->unsigned();
+            $table->integer('round_id')->unsigned();
+            $table->date('date');
+            $table->time('time');
             $table->timestamps();
             $table->softDeletes();	
         });

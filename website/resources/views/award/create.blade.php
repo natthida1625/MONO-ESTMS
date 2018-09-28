@@ -1,39 +1,28 @@
 @extends('layout.page')
 
 @section('content')    
-<div class="container">
-    @if (count($errors) > 0)
-    <div class="alert alert-danger">
-      <strong>Whoops!</strong> There were some problems with your input.<br><br>
-      <ul>
-        @foreach ($errors->all() as $error)
-          <li>{{ $error }}</li>
-        @endforeach
-      </ul>
-    </div>
-    @endif
-
-    <form method="post" action="{{ url('product') }}" enctype="multipart/form-data">
+<div class="container"><br />
+  <form method="post" action="{{ url('award/index') }}" enctype="multipart/form-data">
     @csrf
     <h4>Create New Award</h4>
     <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_name') ? 'has-error' : '' }}">
-          <label class="control-label" for="name">Title:</label>
-          <input type="text" class="form-control" name="product_name" value="{{ isset($data) ? old('product_name',$data->product_name) : old('product_name') }}">
-          @if($errors->has('product_name'))
-            <span class="help-block">{{ $errors->first('product_name') }}</span>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="title">Title:</label>
+          <input type="text" class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" name="title" value="{{ isset($data) ? old('title',$data->title) : old('title') }}">
+          @if($errors->has('title'))
+            <span class="invalid-feedback">กรุณากรอกชื่อการแข่งขัน</span>
           @endif
         </div>
     </div>
 
     <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_description') ? 'has-error' : '' }}">
+        <div class="form-group col-md-4">
           <label class="control-label" for="description">Description:</label>
-          <textarea class="form-control" name="product_description" value="{{ isset($data) ? old('product_description',$data->product_description) : old('product_description') }}" type="textarea" maxlength="140" rows="7"></textarea>
-          @if($errors->has('product_description'))
-            <span class="help-block">{{ $errors->first('product_description') }}</span>
+          <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" value="{{ isset($data) ? old('description',$data->description) : old('description') }}" type="textarea" maxlength="140" rows="7"></textarea>
+          @if($errors->has('description'))
+            <span class="invalid-feedback">กรุณากรอกชื่อการแข่งขัน</span>
           @endif
         </div>
     </div>

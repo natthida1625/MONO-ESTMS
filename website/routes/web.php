@@ -15,6 +15,8 @@ Route::get('/', 'PagesController@index');
 
 Route::get('/welcome', 'PagesController@index');
 
+Route::get('/search', 'PlayerController@search');
+
 Route::resource('player/index', 'PlayerController');
 
 Route::resource('team/index', 'TeamController');

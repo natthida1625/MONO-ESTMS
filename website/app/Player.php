@@ -7,10 +7,10 @@ use App\Team;
 
 class Player extends Model
 {
-    protected $fillable = ['firstname', 'lastname', 'birthday', 'charactername', 'description', 'file'];
+    protected $fillable = ['team_id', 'firstname', 'lastname', 'birthday', 'charactername', 'description', 'file'];
  
-    public function teams()
+    public function team()
     {
-        return $this->belongsToMany('App\Team');
+        return $this->belongsTo('App\Team');
     }
 }

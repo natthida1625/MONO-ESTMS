@@ -1,74 +1,123 @@
 @extends('layout.page')
 
 @section('content')    
-<div class="container">
-    @if (count($errors) > 0)
-    <div class="alert alert-danger">
-      <strong>Whoops!</strong> There were some problems with your input.<br><br>
-      <ul>
-        @foreach ($errors->all() as $error)
-          <li>{{ $error }}</li>
-        @endforeach
-      </ul>
-    </div>
-    @endif
-
-    <form method="post" action="{{ url('product') }}" enctype="multipart/form-data">
+<div class="container"><br />
+  <form method="post" action="{{ url('schedule/index') }}" enctype="multipart/form-data">
     @csrf
-    <h4>Create New Scoreline</h4>
-
+    <h4>Create New Schedule</h4>
     <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_name') ? 'has-error' : '' }}">
-          <label class="control-label" for="name"></label>
-          <input type="text" class="form-control" name="product_name" value="{{ isset($data) ? old('product_name',$data->product_name) : old('product_name') }}">
-          @if($errors->has('product_name'))
-            <span class="help-block">{{ $errors->first('product_name') }}</span>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="date">Date:</label>
+          <input type="date" class="form-control {{ $errors->has('date') ? 'is-invalid' : '' }}" name="date" value="{{ isset($data) ? old('date',$data->date) : old('date') }}">
+          @if($errors->has('date'))
+            <span class="invalid-feedback">กรุณาเลือกวันที่แข่งขัน.</span>           
+          @endif         
+        </div>
+    </div>
+                  
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="time">Time:</label>
+          <input type="time" class="form-control {{ $errors->has('time') ? 'is-invalid' : '' }}" name="time" value="{{ isset($data) ? old('time',$data->time) : old('time') }}">
+          @if($errors->has('time'))
+            <span class="invalid-feedback">กรุณาเลือกเวลาแข่งขัน.</span>
           @endif
         </div>
     </div>
 
     <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_description') ? 'has-error' : '' }}">
-          <label class="control-label" for="description"><label>
-          <textarea class="form-control" name="product_description" value="{{ isset($data) ? old('product_description',$data->product_description) : old('product_description') }}" type="textarea" maxlength="140" rows="7"></textarea>
-          @if($errors->has('product_description'))
-            <span class="help-block">{{ $errors->first('product_description') }}</span>
-          @endif
-        </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('categories') ? 'has-error' : '' }}">
-          <label class="checkbox" for="category"></label>
-                <select name="category_id">
-                    <option value=" "></option>                          
-                </select>          
+        <div class="form-group col-md-4">
+          <label class="control-label" for="round">Round :</label>
+            <select class="form-control {{ $errors->has('round') ? 'is-invalid' : '' }}" name="round_id" id="round">
+            @foreach($rounds as $round)                
+              <option value="{{ $round->id }}">{{ $round->title }}</option>            
+            @endforeach               
+            </select>           
+            @if($errors->has('rounds'))
+            <span class="invalid-feedback">กรุณาเลือกรอบการแข่งขัน</span>
+            @endif
         </div>                
-    </div>  
+    </div>
 
     <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_name') ? 'has-error' : '' }}">
-          <label class="control-label" for="name"></label>
-          <input type="text" class="form-control" name="product_name" value="{{ isset($data) ? old('product_name',$data->product_name) : old('product_name') }}">
-          @if($errors->has('product_name'))
-            <span class="help-block">{{ $errors->first('product_name') }}</span>
-          @endif
-        </div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="tournament">Tournament :</label>
+            <select class="form-control {{ $errors->has('tournament') ? 'is-invalid' : '' }}" name="tournament_id" id="tournament">
+            @foreach($tournaments as $tournament)                
+              <option value="{{ $tournament->id }}">{{ $tournament->title }}</option>            
+            @endforeach               
+            </select>           
+            @if($errors->has('tournaments'))
+            <span class="invalid-feedback">กรุณาเลือกการแข่งขัน</span>
+            @endif
+        </div>                
     </div>
 
-    <div class="row">      
+    <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('file') ? 'has-error' : '' }}">
-          <label class="control-label" for="images"></label>
-          <input type="file" id="file" class="form-control" name="file" value="{{ isset($data) ? old('file',$data->file) : old('file') }}"> 
-          @if($errors->has('file'))
-            <span class="help-block">{{ $errors->first('file') }}</span>
-          @endif
-      </div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="team">Blue Team :</label>
+            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="team_id" id="team">
+            @foreach($teams as $team)                
+              <option value="{{ $team->id }}">{{ $team->name }}</option>            
+            @endforeach               
+            </select>           
+            @if($errors->has('teams'))
+            <span class="invalid-feedback">กรุณาเลือกทีมฝ่ายสีฟ้า</span>
+            @endif
+        </div>                
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="score">Score :</label>
+          
+           
+        </div>                
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="score">Score :</label>
+          
+           
+        </div>                
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="team">Red Team :</label>
+            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="team_id" id="team">
+            @foreach($teams as $team)                
+              <option value="{{ $team->id }}">{{ $team->name }}</option>            
+            @endforeach               
+            </select>           
+            @if($errors->has('teams'))
+            <span class="invalid-feedback">กรุณาเลือกทีมฝ่ายสีแดง</span>
+            @endif
+        </div>                
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="team">Win Team :</label>
+            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="team_id" id="team">
+            @foreach($teams as $team)                
+              <option value="{{ $team->id }}">{{ $team->name }}</option>            
+            @endforeach               
+            </select>           
+            @if($errors->has('teams'))
+            <span class="invalid-feedback">กรุณาเลือกทีมที่ชนะ</span>
+            @endif
+        </div>                
     </div> 
 
     <div class="row">   

@@ -1,19 +1,8 @@
 @extends('layout.page')
 
 @section('content')    
-<div class="container">
-    <!-- @if (count($errors) > 0)
-    <div class="alert alert-danger">
-      <strong>Whoops!</strong> There were some problems with your input.<br><br>
-      <ul>
-        @foreach ($errors->all() as $error)
-          <li>{{ $error }}</li>
-        @endforeach
-      </ul>
-    </div>
-    @endif -->
-
-    <form method="post" action="{{ url('player/index') }}" enctype="multipart/form-data">
+<div class="container"><br />
+  <form method="post" action="{{ url('player/index') }}" enctype="multipart/form-data">
     @csrf
     <h4>Create New Player</h4>
     <div class="row">
@@ -69,6 +58,21 @@
             <span class="invalid-feedback">กรุณาใส่รายละเอียดเกี่ยวกับคุณ</span>
           @endif
         </div>
+    </div>
+
+     <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="team">Team :</label>
+            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="team_id" id="team">
+            @foreach($teams as $team)                
+              <option value="{{ $team->id }}">{{ $team->name }}</option>            
+            @endforeach               
+            </select>           
+            @if($errors->has('teams'))
+            <span class="invalid-feedback">กรุณาเลือกทีมของคุณ</span>
+            @endif
+        </div>                
     </div>
 
     <div class="row">      

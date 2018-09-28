@@ -15,6 +15,7 @@ class CreatePlayersTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('team_id')->unsigned();
             $table->string('firstname');
             $table->string('lastname');
             $table->date('birthday');
@@ -22,7 +23,7 @@ class CreatePlayersTable extends Migration
             $table->longText('description');
             $table->string('file')->nullable();
             $table->timestamps(); 
-            $table->softDeletes();	
+            $table->softDeletes();
         });
     }
 

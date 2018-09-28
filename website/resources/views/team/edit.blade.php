@@ -1,7 +1,7 @@
 @extends('layout.page')
 
 @section('content') 
-<div class="container">
+<div class="container"><br />
   <form method="post" action="{{action('TeamController@update' , $id)}}" enctype="multipart/form-data">
     @csrf
     <h4>Edit Team</h4>

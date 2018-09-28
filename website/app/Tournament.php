@@ -9,7 +9,7 @@ use App\Round;
 
 class Tournament extends Model
 {
-    protected $fillable = ['title', 'description'];
+    protected $fillable = ['title', 'description', 'file'];
 
     public function teams()
     {

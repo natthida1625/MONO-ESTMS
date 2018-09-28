@@ -1,52 +1,45 @@
 @extends('layout.page')
 
 @section('content')    
-<div class="container">
-    @if (count($errors) > 0)
-    <div class="alert alert-danger">
-      <strong>Whoops!</strong> There were some problems with your input.<br><br>
-      <ul>
-        @foreach ($errors->all() as $error)
-          <li>{{ $error }}</li>
-        @endforeach
-      </ul>
-    </div>
-    @endif
-
-    <form method="post" action="{{ url('product') }}" enctype="multipart/form-data">
+<div class="container"><br />
+  <form method="post" action="{{ url('round/index') }}" enctype="multipart/form-data">
     @csrf
     <h4>Create Round</h4>
     <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_name') ? 'has-error' : '' }}">
-          <label class="control-label" for="name">Title:</label>
-          <input type="text" class="form-control" name="product_name" value="{{ isset($data) ? old('product_name',$data->product_name) : old('product_name') }}">
-          @if($errors->has('product_name'))
-            <span class="help-block">{{ $errors->first('product_name') }}</span>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="title">Title:</label>
+          <input type="text" class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" name="title" value="{{ isset($data) ? old('title',$data->title) : old('title') }}">
+          @if($errors->has('title'))
+            <span class="invalid-feedback">กรุณากรอกหัวข้อรอบการแข่งขัน.</span>       
           @endif
         </div>
     </div>
 
     <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_description') ? 'has-error' : '' }}">
-          <label class="control-label" for="description">Description:</label>
-          <textarea class="form-control" name="product_description" value="{{ isset($data) ? old('product_description',$data->product_description) : old('product_description') }}" type="textarea" maxlength="140" rows="7"></textarea>
-          @if($errors->has('product_description'))
-            <span class="help-block">{{ $errors->first('product_description') }}</span>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="round_number">Round number:</label>
+          <input type="text" class="form-control {{ $errors->has('round_number') ? 'is-invalid' : '' }}" name="round_number" value="{{ isset($data) ? old('round_number',$data->round_number) : old('round_number') }}">
+          @if($errors->has('round_number'))
+            <span class="invalid-feedback">กรุณากรอกจำนวนรอบการแข่งขัน.</span>         
           @endif
         </div>
     </div>
 
-      <div class="row">
+     <div class="row">
       <div class="col-md-4"></div>
-        <div class="form-group col-md-4 {{ $errors->has('product_name') ? 'has-error' : '' }}">
-          <label class="control-label" for="name">Amount of Schedule:</label>
-          <input type="text" class="form-control" name="product_name" value="{{ isset($data) ? old('product_name',$data->product_name) : old('product_name') }}">
-          @if($errors->has('product_name'))
-            <span class="help-block">{{ $errors->first('product_name') }}</span>
-          @endif
-        </div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="tournament">Tournaments :</label>
+            <select class="form-control {{ $errors->has('tournament') ? 'is-invalid' : '' }}" name="tournament_id" id="tournament">
+            @foreach($tournaments as $tournament)                
+              <option value="{{ $tournament->id }}">{{ $tournament->title }}</option>            
+            @endforeach               
+            </select>           
+            @if($errors->has('tournaments'))
+            <span class="invalid-feedback">กรุณาเลือกการแข่งขัน</span>
+            @endif
+        </div>                
     </div>
 
     <div class="row">   

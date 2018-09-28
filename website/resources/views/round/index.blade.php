@@ -13,30 +13,31 @@
   <a href="{{ action('RoundController@create')}}">Create Round</a><br /><br /> 
     <thead>
       <tr>
-        <th>Round_ID</th>      
+        <th>ID</th>  
+        <th>Tournament</th>
         <th>Title</th>
-        <th>Round_number</th>
-        <th>Tournament_ID</th>
-        <th colspan="2">Action</th>
+        <th>Round number</th>
+        <th colspan="2"></th>
       </tr>
     </thead>
-    <tbody>     
+    <tbody>
+    @foreach($rounds as $round)
     <tr>
-      <td></td>          
-      <td></td>
-      <td></td>  
-      <td></td>  
-      <td><a href="{{ action('RoundController@edit', ['id'])}}" class="btn btn-primary">Edit</a></td>
+      <td>{{ $round->id}}</td>
+      <td>{{ $round->tournament->title}}</td>
+      <td>{{ $round->title}}</td>  
+      <td>{{ $round->round_number}}</td>
+      <td><a href="{{ action('RoundController@edit', $round['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
-        <form method="post" action="{{action('RoundController@destroy', ['id'])}}">
+        <form method="post" action="{{action('RoundController@destroy', $round['id'])}}">
         @csrf
           <input name="_method" type="hidden" value="DELETE">
           <button class="btn btn-danger" type="submit">Delete</button>
         </form>
       </td>
     </tr>
+    @endforeach
     </tbody>
-
 </table>
 </div>
 @endsection

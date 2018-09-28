@@ -1,7 +1,7 @@
 @extends('layout.page')
 
 @section('content') 
-<div class="container">
+<div class="container"><br />
   <form method="post" action="{{action('PlayerController@update', $id)}}" enctype="multipart/form-data">
     @csrf
     <h4>Edit Player</h4>
@@ -11,7 +11,7 @@
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label for="name">Firstname:</label>
+          <label for="firstname">Firstname:</label>
             <input type="text" class="form-control" name="firstname" value="{{ $player->firstname }}">
         </div>
     </div>
@@ -19,7 +19,7 @@
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label for="name">Lastname:</label>
+          <label for="lastname">Lastname:</label>
             <input type="text" class="form-control" name="lastname" value="{{ $player->lastname }}">
         </div>
     </div>
@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label for="name">Birthday:</label>
+          <label for="birthday">Birthday:</label>
             <input type="date" class="form-control" name="birthday" value="{{ $player->birthday }}">
         </div>
     </div>
@@ -35,7 +35,7 @@
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label for="name">Character name:</label>
+          <label for="charactername">Character name:</label>
             <input type="text" class="form-control" name="charactername" value="{{ $player->charactername }}">
         </div>
     </div>
@@ -46,7 +46,25 @@
           <label for="description">Description:</label>
               <textarea class="form-control" name="description" type="textarea" maxlength="140" rows="7">{{ $player->description }}</textarea>
         </div>
-    </div>    
+    </div>   
+    
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="team">Team :</label>
+            <select class="form-control" name="team_id">
+              @foreach($teams as $team)                
+              <option 
+                value="{{ $team->id }}"
+                @if ($team->id === $player->team_id)
+                  selected
+                @endif                
+                >{{ $team->name }}
+                </option>    
+              @endforeach               
+            </select>                
+      </div>
+    </div>
 
     <div class="row">
       <div class="col-md-4"></div>
