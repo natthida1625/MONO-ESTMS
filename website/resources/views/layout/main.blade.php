@@ -65,13 +65,15 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="{{ asset('asset/img/.jpg') }}" alt="First slide">
+      <img class="d-block w-100" src="{{ asset('asset/img/slide1.jpg') }}" alt="First slide" height="700px" width="300px">
     </div>
+
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{ asset('asset/img/.jpg') }}" alt="Second slide">
+      <img class="d-block w-100" src="{{ asset('asset/img/slide2.jpg') }}" alt="Second slide" height="700px" width="300px">
     </div>
+
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{ asset('asset/img/.jpg') }}" alt="Third slide">
+      <img class="d-block w-100" src="{{ asset('asset/img/slide3.jpg') }}" alt="Third slide" height="700px" width="300px">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -91,12 +93,14 @@
 <div class="container" style="margin-top:30px">
   <div class="row">
     <div class="col-sm-4">
-      <h2>Title 1</h2>
+      <h2>News</h2>
       <h5>Photo of me:</h5>
+      <p>Lorem ipsum dolor sit ame.</p>
       <div class="fakeimg">Fake Image</div>
       <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
 
 	  <h3>Title 2</h3>
+      <h5>Photo of me:</h5>
       <p>Lorem ipsum dolor sit ame.</p>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">

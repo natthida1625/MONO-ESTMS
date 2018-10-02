@@ -61,11 +61,11 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label class="control-label" for="team">Blue Team :</label>
-            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="team_id" id="team">
+            <select class="form-control {{ $errors->has('teams') ? 'is-invalid' : '' }}" name="team_id[]" id="blueteam">
             @foreach($teams as $team)                
               <option value="{{ $team->id }}">{{ $team->name }}</option>            
             @endforeach               
-            </select>           
+            </select>
             @if($errors->has('teams'))
             <span class="invalid-feedback">กรุณาเลือกทีมฝ่ายสีฟ้า</span>
             @endif
@@ -76,8 +76,7 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label class="control-label" for="score">Score :</label>
-          
-           
+              
         </div>                
     </div>
 
@@ -85,8 +84,7 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label class="control-label" for="score">Score :</label>
-          
-           
+               
         </div>                
     </div>
 
@@ -94,7 +92,7 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label class="control-label" for="team">Red Team :</label>
-            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="team_id" id="team">
+            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="team_id[]" id="redteam">
             @foreach($teams as $team)                
               <option value="{{ $team->id }}">{{ $team->name }}</option>            
             @endforeach               
@@ -109,7 +107,7 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label class="control-label" for="team">Win Team :</label>
-            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="team_id" id="team">
+            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="win_team" id="team">
             @foreach($teams as $team)                
               <option value="{{ $team->id }}">{{ $team->name }}</option>            
             @endforeach               

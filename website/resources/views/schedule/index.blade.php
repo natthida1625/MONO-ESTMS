@@ -19,9 +19,9 @@
         <th>Round</th>
         <th>Tournament</th>
         <th>Blue Team</th>
-        <th>Score</th>
         <th></th>
         <th>Score</th>
+        <th></th>
         <th>Red Team</th>
         <th>Win Team</th> 
         <th colspan="2"></th>
@@ -29,18 +29,18 @@
     </thead>
     <tbody> 
     @foreach($schedules as $schedule)
-    <tr>
+    <tr class="table-primary">
       <td>{{ $schedule->id }}</td> 
       <td>{{ $schedule->date }}</td>     
       <td>{{ $schedule->time }}</td>
       <td>{{ $schedule->round->title }}</td>
       <td>{{ $schedule->tournament->title }}</td>
-      <td>{{ $schedule->id }}</td>
-      <td>{{ $schedule->id }}</td> 
+      <td>{{ $schedule->teams->first()->name }}</td>
+      <td></td> 
       <td>-</td> 
-      <td>{{ $schedule->id }}</td> 
-      <td>{{ $schedule->id }}</td> 
-      <td>{{ $schedule->id }}</td> 
+      <td></td> 
+      <td>{{ $schedule->teams->last()->name }}</td> 
+      <td>{{ $schedule->teams()->count() }}</td>        
       <td><a href="{{ action('ScheduleController@edit', $schedule['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
         <form method="post" action="{{action('ScheduleController@destroy', $schedule['id'])}}">

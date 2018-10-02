@@ -47,15 +47,14 @@ class ScheduleController extends Controller
             'date' => 'required',
             'time' => 'required',            
             'round_id' => 'required',
-            'tournament_id' => 'required',
-            'teams' => 'require'
+            'tournament_id' => 'required'
         ],[
              // 'required' => 'กรุณากรอก :attribute',
             // 'numeric' => 'กรุณากรอก :attribute เป็นตัวเลข',
 
         ]);
-        // dd($request->all());
-        $teams = $request->input('teams');   
+        
+        $team_ids = $request->input('team_id');   
         $schedule =  new Schedule;
         $schedule->date = $request->input('date');       
         $schedule->time = $request->input('time');  
@@ -71,7 +70,11 @@ class ScheduleController extends Controller
         // $schedule->file = $filename;        
         // $schedule->save();
         // dd($player->team->name);
-
+        $teams = [];
+        foreach($team_ids as $team_id)  {
+            $teams[$team_id]['score'] = 0;
+            $teams[$team_id]['status'] = '';
+        }
         $schedule->teams()->sync($teams);
         return redirect('schedule/index')->with('success', 'Information has been added');
     }
