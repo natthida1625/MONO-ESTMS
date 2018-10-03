@@ -54,7 +54,10 @@ class ScheduleController extends Controller
 
         ]);
         
-        $team_ids = $request->input('team_id');   
+        // dd($request->all());
+        $team_ids = $request->input('team_id'); 
+        $score = $request->input('score');
+        $status = $request->input('status');
         $schedule =  new Schedule;
         $schedule->date = $request->input('date');       
         $schedule->time = $request->input('time');  
@@ -71,10 +74,11 @@ class ScheduleController extends Controller
         // $schedule->save();
         // dd($player->team->name);
         $teams = [];
-        foreach($team_ids as $team_id)  {
-            $teams[$team_id]['score'] = 0;
-            $teams[$team_id]['status'] = '';
+        foreach($team_ids as $key => $team_id)  {
+            $teams[$team_id]['score'] = $score[$key];
+            $teams[$team_id]['status'] = $status[$key];
         }
+        // dd($teams);
         $schedule->teams()->sync($teams);
         return redirect('schedule/index')->with('success', 'Information has been added');
     }
@@ -99,12 +103,13 @@ class ScheduleController extends Controller
     public function edit($id)
     {
         $schedule = \App\Schedule::find($id);
+        // dd($schedule->teams->first()->pivot->score); 
         $schedule_team = $schedule->teams->pluck('id')->toArray();
 
         $teams = Team::all();
         $tournaments = Tournament::all();
         $rounds = Round::all();
-        return view('schedule.edit',compact('schedule', 'id', 'tournaments', 'rounds'));    
+        return view('schedule.edit',compact('schedule', 'id', 'tournaments', 'rounds', 'teams', 'schedule_team'));    
     }
 
     /**
@@ -116,11 +121,14 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // dd($request->all());
         $data = $request->all();
         unset($data['_token']);
         unset($data['_method']);
-
-        $teams = $request->input('teams');
+        // dd($request->all());
+        $team_ids = $request->input('team_id');  
+        $score = $request->input('score');
+        $status = $request->input('status'); 
         $schedule = Schedule::find($id);
         // $old_file = $schedule->file;
         $schedule->update($data);
@@ -133,6 +141,13 @@ class ScheduleController extends Controller
         // $schedule->file = $filename; 
         $schedule->save();
 
+        $teams = [];
+        foreach($team_ids as $key => $team_id)  {
+            $teams[$team_id]['score'] = $score[$key];
+            $teams[$team_id]['status'] = $status[$key];
+        }
+        // dd($teams);
+        $schedule->teams()->detach();
         $schedule->teams()->sync($teams);
         return redirect('schedule/index');     
     }

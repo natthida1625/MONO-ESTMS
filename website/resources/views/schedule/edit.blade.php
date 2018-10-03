@@ -62,6 +62,75 @@
 
     <div class="row">
       <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="team">Blue Team :</label>
+            <select class="form-control" name="team_id[]" id="blueteam">
+              @foreach($teams as $team)                
+              <option 
+                value="{{ $team->id }}"
+                @if ($team->id === $schedule->teams->first()->id)
+                  selected
+                @endif   
+                >{{ $team->name }}
+              </option>    
+              @endforeach               
+            </select>                
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="status">Status Blue :</label>
+          <input type="text" class="form-control" name="status[]" value="{{ $schedule->teams->first()->pivot->status }}" id="status_blue">          
+      </div>
+    </div>
+     
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="score">Score Blue :</label>
+          <input type="text" class="form-control" name="score[]" value="{{ $schedule->teams->first()->pivot->score }}" id="score_blue">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="score">Score Red :</label>
+          <input type="text" class="form-control" name="score[]" value="{{ $schedule->teams->last()->pivot->score }}" id="score_red">          
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="status">Status Red :</label>
+          <input type="text" class="form-control" name="status[]" value="{{ $schedule->teams->last()->pivot->status }}" id="status_red">          
+      </div>
+    </div>
+
+     <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="team">Red Team :</label>
+            <select class="form-control" name="team_id[]" id="redteam">
+              @foreach($teams as $team)                
+              <option 
+                value="{{ $team->id }}"
+                @if ($team->id === $schedule->teams->last()->id)
+                  selected
+                @endif                
+                >{{ $team->name }}
+              </option>    
+              @endforeach               
+            </select>                
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-4"></div>
         <div class="form-group col-md-4" style="margin-top:60px">
           <button type="submit" class="btn btn-success" style="margin-left:38px">Save</button>
         </div>

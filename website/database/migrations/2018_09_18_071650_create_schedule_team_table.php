@@ -20,8 +20,8 @@ class CreateScheduleTeamTable extends Migration
 
             $table->integer('team_id')->unsigned();        
             $table->foreign('team_id')->references('id')->on('teams');
-            $table->integer('score');
-            $table->string('status');
+            $table->integer('score')->nullable();
+            $table->string('status')->nullable();
         });
     }
 

@@ -42,7 +42,7 @@
             @endforeach
           </div>       
             @if($errors->has('teams'))
-              <span class="help-block">{{ $errors->first('teams') }}</span>
+              <span class="invalid-feedback">{{ $errors->first('teams') }}</span>
             @endif
         </div>                
     </div> 

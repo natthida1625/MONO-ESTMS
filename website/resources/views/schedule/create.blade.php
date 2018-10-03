@@ -71,20 +71,48 @@
             @endif
         </div>                
     </div>
-
+  
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label class="control-label" for="score">Score :</label>
-              
+          <label class="control-label" for="status">Status Blue :</label>
+          <input type="text" class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" name="status[]" value="{{ isset($data) ? old('status',$data->status) : old('status') }}" id="status_blue">
+          @if($errors->has('status'))
+            <span class="invalid-feedback">กรุณาใส่ผลการแข่งขัน.</span>
+          @endif 
         </div>                
     </div>
 
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label class="control-label" for="score">Score :</label>
-               
+          <label class="control-label" for="score">Score Blue:</label>
+          <input type="text" class="form-control {{ $errors->has('score') ? 'is-invalid' : '' }}" name="score[]" value="{{ isset($data) ? old('score',$data->score) : old('score') }}" id="score_blue">
+          @if($errors->has('score'))
+            <span class="invalid-feedback">กรุณากรอกคะแนน</span>
+          @endif
+        </div>                
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="score">Score Red :</label>
+          <input type="text" class="form-control {{ $errors->has('score') ? 'is-invalid' : '' }}" name="score[]" value="{{ isset($data) ? old('score',$data->score) : old('score') }}" id="score_red">
+          @if($errors->has('score'))
+            <span class="invalid-feedback">กรุณากรอกคะแนน.</span>
+          @endif
+        </div>                
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label class="control-label" for="status">Status Red :</label>
+          <input type="text" class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" name="status[]" value="{{ isset($data) ? old('status',$data->status) : old('status') }}" id="status_red">
+          @if($errors->has('status'))
+            <span class="invalid-feedback">กรุณาใส่ผลการแข่งขัน.</span>
+          @endif
         </div>                
     </div>
 
@@ -102,22 +130,7 @@
             @endif
         </div>                
     </div>
-
-    <div class="row">
-      <div class="col-md-4"></div>
-        <div class="form-group col-md-4">
-          <label class="control-label" for="team">Win Team :</label>
-            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="win_team" id="team">
-            @foreach($teams as $team)                
-              <option value="{{ $team->id }}">{{ $team->name }}</option>            
-            @endforeach               
-            </select>           
-            @if($errors->has('teams'))
-            <span class="invalid-feedback">กรุณาเลือกทีมที่ชนะ</span>
-            @endif
-        </div>                
-    </div> 
-
+    
     <div class="row">   
       <div class="col-md-4"></div>
         <div class="form-group col-md-4" style="margin-top:60px">

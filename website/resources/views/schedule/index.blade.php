@@ -12,35 +12,38 @@
   <h4>Schedule List</h4>
   <a href="{{ action('ScheduleController@create')}}">Create schedule </a><br /><br /> 
     <thead>
-      <tr>
+      <tr width="100%">
         <th>ID</th>             
         <th>Date</th>
         <th>Time</th>
         <th>Round</th>
         <th>Tournament</th>
         <th>Blue Team</th>
+        <th>Status</th>
         <th></th>
         <th>Score</th>
         <th></th>
-        <th>Red Team</th>
-        <th>Win Team</th> 
+        <th>Status</th>
+        <th>Red Team</th> 
+        <th>Win Team</th>        
         <th colspan="2"></th>
       </tr>
     </thead>
     <tbody> 
     @foreach($schedules as $schedule)
-    <tr class="table-primary">
+    <tr>
       <td>{{ $schedule->id }}</td> 
       <td>{{ $schedule->date }}</td>     
       <td>{{ $schedule->time }}</td>
       <td>{{ $schedule->round->title }}</td>
       <td>{{ $schedule->tournament->title }}</td>
       <td>{{ $schedule->teams->first()->name }}</td>
-      <td></td> 
+      <td>{{ $schedule->teams->first()->pivot->status }}</td>    
+      <td>{{ $schedule->teams->first()->pivot->score }}</td> 
       <td>-</td> 
-      <td></td> 
+      <td>{{ $schedule->teams->last()->pivot->score }}</td> 
+      <td>{{ $schedule->teams->last()->pivot->status }}</td>    
       <td>{{ $schedule->teams->last()->name }}</td> 
-      <td>{{ $schedule->teams()->count() }}</td>        
       <td><a href="{{ action('ScheduleController@edit', $schedule['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
         <form method="post" action="{{action('ScheduleController@destroy', $schedule['id'])}}">
