@@ -20,8 +20,8 @@ class CreateScheduleTeamTable extends Migration
 
             $table->integer('team_id')->unsigned();        
             $table->foreign('team_id')->references('id')->on('teams');
-            $table->integer('score')->nullable();
-            $table->string('status')->nullable();
+            $table->integer('score')->nullable(true);
+            $table->string('status')->nullable(true);
         });
     }
 
@@ -33,5 +33,7 @@ class CreateScheduleTeamTable extends Migration
     public function down()
     {
         Schema::dropIfExists('schedule_team');
+        $table->integer('score')->nullable(false);
+        $table->string('status')>nullable(false);
     }
 }

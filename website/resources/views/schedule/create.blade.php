@@ -76,10 +76,14 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label class="control-label" for="status">Status Blue :</label>
-          <input type="text" class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" name="status[]" value="{{ isset($data) ? old('status',$data->status) : old('status') }}" id="status_blue">
-          @if($errors->has('status'))
-            <span class="invalid-feedback">กรุณาใส่ผลการแข่งขัน.</span>
-          @endif 
+          <select class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" name="status[]" id="status_blue">                         
+              <option value="">กรุณาเลือกผลการแข่งขัน</option>          
+              <option value="win">Win</option>
+              <option value="lose">Lose</option>       
+          </select>           
+            @if($errors->has('status'))
+            <span class="invalid-feedback">กรุณาผลการแข่งขัน</span>
+            @endif
         </div>                
     </div>
 
@@ -109,10 +113,14 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label class="control-label" for="status">Status Red :</label>
-          <input type="text" class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" name="status[]" value="{{ isset($data) ? old('status',$data->status) : old('status') }}" id="status_red">
-          @if($errors->has('status'))
-            <span class="invalid-feedback">กรุณาใส่ผลการแข่งขัน.</span>
-          @endif
+          <select class="form-control {{ $errors->has('status') ? 'is-invalid' : '' }}" name="status[]" id="status_red">                         
+              <option value="">กรุณาเลือกผลการแข่งขัน</option>          
+              <option value="win">Win</option>
+              <option value="lose">Lose</option>       
+          </select>           
+            @if($errors->has('status'))
+            <span class="invalid-feedback">กรุณาผลการแข่งขัน</span>
+            @endif
         </div>                
     </div>
 

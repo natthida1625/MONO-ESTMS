@@ -25,7 +25,7 @@
         <th></th>
         <th>Status</th>
         <th>Red Team</th> 
-        <th>Win Team</th>        
+        <th>Win</th>        
         <th colspan="2"></th>
       </tr>
     </thead>
@@ -44,6 +44,7 @@
       <td>{{ $schedule->teams->last()->pivot->score }}</td> 
       <td>{{ $schedule->teams->last()->pivot->status }}</td>    
       <td>{{ $schedule->teams->last()->name }}</td> 
+      <td>{{ $schedule->teams()->wherePivot('status', 'win')->count()==0 ? '' : $schedule->teams()->wherePivot('status', 'win')->first()->name }}</td> 
       <td><a href="{{ action('ScheduleController@edit', $schedule['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
         <form method="post" action="{{action('ScheduleController@destroy', $schedule['id'])}}">

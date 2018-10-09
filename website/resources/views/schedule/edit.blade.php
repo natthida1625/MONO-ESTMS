@@ -82,9 +82,13 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label for="status">Status Blue :</label>
-          <input type="text" class="form-control" name="status[]" value="{{ $schedule->teams->first()->pivot->status }}" id="status_blue">          
-      </div>
-    </div>
+          <select class="form-control" name="status[]" id="status_blue">
+              <option value="default">กรุณาเลือกผลการแข่งขัน</option>          
+              <option value="win">Win</option>
+              <option value="lose">Lose</option>  
+          </select>        
+        </div>
+    </div> 
      
     <div class="row">
       <div class="col-md-4"></div>
@@ -106,7 +110,11 @@
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
           <label for="status">Status Red :</label>
-          <input type="text" class="form-control" name="status[]" value="{{ $schedule->teams->last()->pivot->status }}" id="status_red">          
+          <select class="form-control" name="status[]" id="status_red">
+              <option value="default">กรุณาเลือกผลการแข่งขัน</option>          
+              <option value="win">Win</option>
+              <option value="lose">Lose</option>         
+          </select>     
       </div>
     </div>
 

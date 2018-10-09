@@ -37,7 +37,7 @@
     <tbody>
     @foreach($players as $player)
     <tr>
-      <td><img src="{{ asset('storage/'.$player->file) }}" width="160px" height="220px"></td>          
+      <td><img src="{{ asset('storage/'.$player->file) }}" width="150px" height="210px"></td>          
       <td>{{ $player->id }}</td>
       <td>{{ $player->team->name }}</td>
       <td>{{ $player->firstname }}</td>  

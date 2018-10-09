@@ -23,6 +23,6 @@ class Tournament extends Model
 
     public function rounds()
     {
-        return $this->hasMany('App\Rounds');
+        return $this->hasMany('App\Round');
     }
 }

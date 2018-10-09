@@ -23,6 +23,6 @@ class Team extends Model
 
     public function schedules()
     {
-        return $this->belongsToMany('App\Schedule');
+        return $this->belongsToMany('App\Schedule')->wherePivot('status', win);;
     }
 }

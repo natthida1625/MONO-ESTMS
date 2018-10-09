@@ -57,7 +57,8 @@ class ScheduleController extends Controller
         // dd($request->all());
         $team_ids = $request->input('team_id'); 
         $score = $request->input('score');
-        $status = $request->input('status');
+
+      
         $schedule =  new Schedule;
         $schedule->date = $request->input('date');       
         $schedule->time = $request->input('time');  
@@ -76,7 +77,7 @@ class ScheduleController extends Controller
         $teams = [];
         foreach($team_ids as $key => $team_id)  {
             $teams[$team_id]['score'] = $score[$key];
-            $teams[$team_id]['status'] = $status[$key];
+            $teams[$team_id]['status'] = empty($status[$key]) ? null : $status[$key];
         }
         // dd($teams);
         $schedule->teams()->sync($teams);
@@ -103,12 +104,15 @@ class ScheduleController extends Controller
     public function edit($id)
     {
         $schedule = \App\Schedule::find($id);
-        // dd($schedule->teams->first()->pivot->score); 
-        $schedule_team = $schedule->teams->pluck('id')->toArray();
+        $schedule_team = $schedule->teams->pluck('id')->toArray();      
+
 
         $teams = Team::all();
         $tournaments = Tournament::all();
         $rounds = Round::all();
+       
+        // dd($schedule); 
+
         return view('schedule.edit',compact('schedule', 'id', 'tournaments', 'rounds', 'teams', 'schedule_team'));    
     }
 
@@ -146,7 +150,6 @@ class ScheduleController extends Controller
             $teams[$team_id]['score'] = $score[$key];
             $teams[$team_id]['status'] = $status[$key];
         }
-        // dd($teams);
         $schedule->teams()->detach();
         $schedule->teams()->sync($teams);
         return redirect('schedule/index');     
