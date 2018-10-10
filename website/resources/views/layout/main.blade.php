@@ -93,7 +93,20 @@
 <!-- main-content -->
 <div class="container" style="margin-top:30px">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4">               
+      <br>   
+      <h3>News</h3>
+      <p>ข่าวที่น่าสนใจ</p>
+      <p>Lorem ipsum dolor sit ame.</p>
+      <div><img href="#" src="{{ asset('asset/img/') }}"></div>
+      <p>Some text about me in culpa qui officia deserunt mollit <a href="#">อ่านเพิ่มเติม...</a></p>	 
+
+      <br>   
+      <h3>News</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+      <div><img href="#" src="{{ asset('asset/img/') }}"></div>
+      <p>Some text about me in culpa qui officia deserunt mollit <a href="#">อ่านเพิ่มเติม...</a></p>
+
       <h3>Menu</h3>      
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -103,19 +116,6 @@
             <a class="nav-link" href="#">ผลการแข่งขัน</a>
           </li>             
         </ul>
-          
-      <br>   
-      <h3>News</h3>
-      <p>ข่าวที่น่าสนใจ</p>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit <a href="#">อ่านเพิ่มเติม...</a></p>	 
-
-      <br>   
-      <h3>News</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit <a href="#">อ่านเพิ่มเติม...</a></p>
     </div>    
 
 
@@ -124,7 +124,7 @@
 	@yield('content')
 	</div>
 	<!--/.content -->
-
+      
   </div>
 </div>
 <!--/.main-content -->

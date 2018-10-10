@@ -17,6 +17,8 @@ Route::get('/welcome', 'PagesController@index');
 
 Route::get('/program', 'ProgramController@index');
 
+Route::get('/news', 'PagesController@news');
+
 Route::get('/search', 'PlayerController@search');
 
 Route::resource('player/index', 'PlayerController');
