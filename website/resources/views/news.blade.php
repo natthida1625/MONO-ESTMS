@@ -97,7 +97,7 @@
       </p>
       <b>การเปลี่ยนแปลงของตัวละคร</b><br/>
       <b><p>1.&nbsp;The Flash</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic2.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic2.png') }}"><br/></div></p>
       <ul>
         <li>ลดความเร็วเหลือ 380 จากเดิม 400</li>
       </ul>      
@@ -108,7 +108,7 @@
       </ul> 
 
       <b><p>2.&nbsp;Azzen'ka</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic3.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic3.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Sand Trap)</p></b>
       <ul>
         <li>ระยะเวลาที่ศัตรูติดสัญลักษณ์เพิ่มขึ้น จากเดิม 5 วินาที เป็น 6 วินาที</li>
@@ -116,7 +116,7 @@
       </ul>  
 
       <b><p>3.&nbsp;Gildur</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic4.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic4.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (The Touch)</p></b>
       <ul>
         <li>การโจมตีครั้งที่ 4 จะผลักศัตรูและสร้างความเสียหาย จากเดิมสร้างความเสียหายเวท 226% AP เป็นสร้างความเสียหายเวท 150% AD + 100% AP</li>
@@ -124,7 +124,7 @@
       </ul>    
       
       <b><p>4.&nbsp;Ignis</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic5.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic5.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Sacred Flame)</p></b>
       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล Fire Crash จะทำให้ศัตรูติดสัญลักษณ์ไฟทันที เป็นเวลา 3 วินาที หากหลังจากนั้น 
       หากใช้สกิลใส่เป้าหมายที่ติดสัญลักษณ์ จะทำให้สกิลได้รับการเพิ่มความสามารถ รีเฟรชคูลดาวน์ของ Fire Clash และฟื้นฟู HP ให้ตนเองเพิ่มขึ้น 120 หน่วย (+8 หน่วย/LV) (+0.3 พลังโจมตีเวท)</p>
@@ -137,7 +137,7 @@
       </ul> 
       
       <b><p>5.&nbsp;Aleister</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic6.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic6.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล Ultimate (Magic Prison)</p></b>
       <ul>
         <li>ศัตรูจะไม่สามารถขยับตัวได้เลยเมื่อโดนสกิล</li>
@@ -145,7 +145,7 @@
       </ul>   
 
       <b><p>6.&nbsp;Veera</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic7.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic7.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Hell Bat)</p></b>
       <ul>
         <li>ระยะสกิลเพิ่มขึ้น จากเดิม 7 เมตร เป็น 7.5 เมตร</li>        
@@ -156,14 +156,14 @@
       </ul> 
 
       <b><p>7.&nbsp;Lauriel</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic8.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic8.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Divine Punishment)</p></b>
       <ul>
         <li>ความเร็วเคลื่อนที่ลง 50%-90% (ตามเลเวล)</li>        
       </ul>   
 
      <b><p>8.&nbsp;Diao Chan</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic9.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic9.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Chilling Frost)</p></b>
       <ul>
         <li>สร้างความเสียหายเวทเปลี่ยนแปลงจากเดิม +0.85 พลังโจมตีเวท เป็น +0.75 พลังโจมตีเวท</li>  
@@ -175,7 +175,7 @@
       </ul> 
 
       <b><p>9.&nbsp;Preyta</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic10.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic10.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล Ultimate (Plague Tentacles)</p></b>
       <ul>
         <li>ความเร็วโจมตีเพิ่มขึ้นจากเดิม 15% เป็น 20%</li>
@@ -184,7 +184,7 @@
       </ul>   
 
       <b><p>10.&nbsp;Yorn</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic11.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic11.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Fierce Shot)</p></b>
       <ul>
         <li>สร้างความเสียหายกายภาพเพิ่มขึ้นจากเดิม 70 เป็น 75 (+4/LV) (+0.4 พลังโจมตีกายภาพ)</li>        
@@ -211,7 +211,7 @@
       </ul> 
 
       <b><p>11.&nbsp;Tel'Annas</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic12.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic12.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Eagle Eye)</p></b>
       <ul>
         <li>ความเสียหายเวทเปลี่ยนแปลงจากเดิม +0.1 พลังโจมตีกายภาพ เป็น +0.55 พลังโจมตีกายภาพ</li>
@@ -219,7 +219,7 @@
       </ul>   
 
       <b><p>12.&nbsp;Valhein</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic13.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic13.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Pocket Glaive)</p></b>
       <ul>
         <li>เอฟเฟกต์สตั้นแสดงผลน้อยลงจากเดิม 1 วินาที เป็น 0.75 วินาที</li>
@@ -228,21 +228,21 @@
       </ul>   
 
       <b><p>13.&nbsp;The Joker</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic14.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic14.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล Ultimate (Lethal Laughing gas)</p></b>
       <ul>
         <li>หลังใช้สกิลจะโจมตีเร็วขึ้น 50%/75%/100% เป็นเวลา 4 วินาที</li>
       </ul> 
 
       <b><p>14.&nbsp;Violet</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic15.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic15.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Tactical Fire)</p></b>
       <ul>
         <li>ความเสียหายกายภาพลดลงจากเดิม 275/315/355/395/435/475 (+1.0 พลังโจมตีกายภาพ) เป็น 275/305/335/365/395/425 (+1.0 พลังโจมตีกายภาพ)</li>
       </ul> 
 
       <b><p>15.&nbsp;Payna</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic16.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic16.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Healing Light)</p></b>
       <ul>
         <li>ฟื้นฟูพลังชีวิตจากเดิม 60 หน่วย (+20/LV) (+0.1 พลังโจมตีเวท) (+10% ของพลังชีวิตที่เสียไป) เป็น 80 หน่วย (+25/LV) (+0.1 พลังโจมตีเวท) (+7% ของพลังชีวิตที่เสียไป)</li>
@@ -253,14 +253,14 @@
       </ul> 
 
       <b><p>16.&nbsp;WuKong</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic17.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic17.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Shadow Clone)</p></b>
       <ul>
         <li>คูลดาวน์เปลี่ยนแปลงจากเดิม 15/13.8/12.6/11.4/10.2/9 เป็น 12/11.4/10.8/10.2/9.6/9</li>
       </ul> 
 
       <b><p>17.&nbsp;Airi</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic18.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic18.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล Ultimate (Ryu no Ikari)</p></b>
       <ul>
         <li>สตั๊นศัตรูลดลงจากเดิม 1.25 วินาที เป็น 1 วินาที</li>
@@ -270,7 +270,7 @@
       </ul> 
 
       <b><p>18.&nbsp;Zephys</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic19.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic19.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Final Rift)</p></b>
       <ul>
         <li>มานาลดลงจากเดิม 45/50/55/60/65/70 เป็น 30/35/40/45/50/55</li>
@@ -281,14 +281,14 @@
       </ul> 
 
       <b><p>19.&nbsp;Kriknak</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic20.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic20.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล Ultimate (Fury of Flying Locusts)</p></b>
       <ul>
         <li>ความเสียหายกายภาพลดลงจากเดิม +2.65 พลังโจมตีกายภาพ เป็น +2.60 พลังโจมตีกายภาพ</li>       
       </ul> 
 
       <b><p>20.&nbsp;Baldum</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic21.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic21.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Wild Charge)</p></b>
       <ul>
         <li>ความเสียหายกายภาพเปลี่ยนแปลงจากเดิม +0.2 เกราะ (+0.3 พลังโจมตีกายภาพ) เป็น +0.3 เกราะ (+0.5 พลังโจมตีกายภาพ)</li>
@@ -304,7 +304,7 @@
       </ul> 
 
       <b><p>21.&nbsp;Slimz</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic22.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic22.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Flying Spear)</p></b>
       <ul>
         <li>พลังชีวิตพื้นฐานลดลงจากเดิม 3389 เป็น 3292</li> 
@@ -312,7 +312,7 @@
       </ul> 
 
       <b><p>22.&nbsp;Wisp</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic23.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic23.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Loose Cannon)</p></b>
       <ul>
         <li>ความเสียหายกายภาพเปลี่ยนแปลงจากเดิม +1.15 พลังโจมตีกายภาพ เป็น +0.9 พลังโจมตีกายภาพ</li>
@@ -330,7 +330,7 @@
       </ul> 
 
       <b><p>23.&nbsp;Lu Bu</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic24.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic24.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Tyrant)</p></b>
       <ul>
         <li>เพิ่มความเร็วโจมตี 10% สะสมได้สูงสุด 5 ครั้ง เป็นเวลา 3 วินาที</li> 
@@ -339,7 +339,7 @@
       </ul> 
 
       <b><p>24.&nbsp;Amily</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic25.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic25.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 2 (Combo)</p></b>
       <ul>
         <li>คูลดาวน์จากเดิม 7/6.8/6.6/6.4/6.2/6 เป็น 6 วินาที ทุกเลเวล</li> 
@@ -351,7 +351,7 @@
       </ul> 
 
       <b><p>25.&nbsp;Roxie</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic26.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic26.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล Ultimate (Agnie’s Grasp)</p></b>
       <ul>
         <li>รีเซ็ตคูลดาวน์ของสกิลจากเดิม สกิล Wild Fire เป็น สกิล Wild Fire และ Blazing Shield</li> 
@@ -361,21 +361,21 @@
       </ul> 
 
       <b><p>26.&nbsp;Max</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic27.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic27.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 1 (Bionic Blender)</p></b>
       <ul>
         <li>ความเร็วเคลื่อนที่เพิ่มขึ้นเพิ่มขึ้นจากเดิม 6% เป็น 10%</li>         
       </ul> 
 
       <b><p>27.&nbsp;Ormarr</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic28.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic28.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Deterrence)</p></b>
       <ul>
         <li>สตั๊นจากเดิม 0.75 วินาที กลายเป็น 0.75~1 วินาทีตาม LV</li>        
       </ul> 
 
       <b><p>28.&nbsp;Taara</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic29.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic29.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Fighting Spirit)</p></b>
       <ul>
         <li>ทุกครั้งที่ใช้สกิลจะสูญเสีย 8% ของ HP ปัจจุบัน</li>  
@@ -383,30 +383,28 @@
       </ul> 
 
       <b><p>29.&nbsp;Kil’Groth</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic30.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic30.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิล 2 (Enraged Spear)</p></b>
       <ul>
         <li>ความเสียหายเวทเพิ่มขึ้นจากเดิม 60/100/140/180/220/260 เป็น 75/115/155/195/235/275</li>   
-        <li>ความเสียหายเวท(เมื่อใช้สกิล)จากเดิม 50/80/110/140/170/200 กลายเป็น 50/85/120/155/190/225</li>            
+        <li>ความเสียหายเวท(เมื่อใช้สกิล)จากเดิม 50/80/110/140/170/200 เป็น 50/85/120/155/190/225</li>          
       </ul> 
-
+ 
       <b><p>30.&nbsp;Thane</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic33.png') }}"><br/></div></p>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic33.png') }}"><br/></div></p>
       <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Royal Power)</p></b>
       <ul>
         <li>เมื่อพลังชีวิตต่ำว่า 30% จะลดความเสียหายที่ได้รับลง 25%</li>     
         <li>ฟื้นฟูพลังชีวิต 24% ของพลังชีวิตสูงสุดภายใน 6 วินาที คูลดาวน์ 75 วินาที</li>  
-        <li>ความเร็วพื้นฐานเพิ่มขึ้นจากเดิม 370 เป็น 380</li>    
+        <li>ความเร็วพื้นฐานเพิ่มขึ้นจากเดิม 370 เป็น 380</li> 
       </ul> 
-
+      
       <b><p>31.&nbsp;Mortos</p></b>
-      <p><div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/pic30.png') }}"><br/></div></p>
-      <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Paragon)</p></b>
+      <p><div><img class="rounded-mx-auto" src="{{ asset('asset/img/pic31.png') }}"><br/></div></p>
+      <b><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สกิลติดตัว (Royal Power)</p></b>
       <ul>
-        <li>เกราะเพิ่มขึ้นจากเดิม 28 หน่วย เป็น 88 หน่วย</li>        
-      </ul> 
-
-
+        <li>เกราะเพิ่มขึ้นจากเดิม 28 หน่วย เป็น 88 หน่วย</li> 
+      </ul>      
     </div> 
   </div>  
 </div>  
