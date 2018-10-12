@@ -4,9 +4,10 @@
   <title>ROV ARENA</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
-	<link rel="icon" type="image/png" href="{{ asset('asset/img/icon.png') }}" /> 
+	<link rel="icon" type="image/png" href="{{ asset('asset/img/rov.png') }}" /> 
 </head>
 <body>
 

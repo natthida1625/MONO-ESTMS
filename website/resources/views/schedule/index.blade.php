@@ -20,11 +20,10 @@
         <th>Tournament</th>
         <th>Blue Team</th>
         <th>Status</th>
-        <th></th>
         <th>Score</th>
-        <th></th>
-        <th>Status</th>
         <th>Red Team</th> 
+        <th>Status</th>
+        <th>Score</th>
         <th>Win</th>        
         <th colspan="2"></th>
       </tr>
@@ -39,11 +38,10 @@
       <td>{{ $schedule->tournament->title }}</td>
       <td>{{ $schedule->teams->first()->name }}</td>
       <td>{{ $schedule->teams->first()->pivot->status }}</td>    
-      <td>{{ $schedule->teams->first()->pivot->score }}</td> 
-      <td>-</td> 
-      <td>{{ $schedule->teams->last()->pivot->score }}</td> 
-      <td>{{ $schedule->teams->last()->pivot->status }}</td>    
+      <td>{{ $schedule->teams->first()->pivot->score }}</td>
       <td>{{ $schedule->teams->last()->name }}</td> 
+      <td>{{ $schedule->teams->last()->pivot->status }}</td> 
+      <td>{{ $schedule->teams->last()->pivot->score }}</td>    
       <td>{{ $schedule->teams()->wherePivot('status', 'win')->count()==0 ? '' : $schedule->teams()->wherePivot('status', 'win')->first()->name }}</td> 
       <td><a href="{{ action('ScheduleController@edit', $schedule['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-	<link rel="icon" type="image/png" href="{{ asset('asset/img/icon.png') }}" /> 
+	<link rel="icon" type="image/png" href="{{ asset('asset/img/rov.png') }}" /> 
   </head>
 <body>
 
@@ -93,19 +93,20 @@
 <!-- main-content -->
 <div class="container" style="margin-top:30px">
   <div class="row">
-    <div class="col-sm-4">               
+    <div class="col-sm-4 border">               
       <br>   
       <h3>News</h3>
-      <p>ข่าวที่น่าสนใจ</p>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <div><img href="#" src="{{ asset('asset/img/') }}"></div>
-      <p>Some text about me in culpa qui officia deserunt mollit <a href="#">อ่านเพิ่มเติม...</a></p>	 
+      <h6>ข่าวที่น่าสนใจ</h6><br/>
+      <b><p>ROV Pro League Season 2 ชิงรางวัลมูลค่ากว่า 6 ล้านบาท</p></b>
+      <div><img class="rounded-mx-auto" src="{{ asset('asset/img/title3.jpg') }}"></div><br/>
+      <p>หลังจากที่ประสบความสำเร็จกับรายการแข่งขันเกม ROV Pro League ในครั้งที่แล้ว ล่าสุด Garena 
+        ได้ประกาศ ROV Pro League Season 2 โดยความร่วมมือจากผู้สนับสนุนอีกมากมาย อาทิ TRUE, Yamaha และ Oppo 
+        มาร่วมเป็นส่วนหนึ่งของการแข่งขันครั้งนี้ เพื่อดึ่งอีสปอร์ตไทย ไปสู่ระดับโลก <a href="{{ action('PagesController@news3')}}">อ่านเพิ่มเติม...</a></p>	 
 
       <br>   
-      <h3>News</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <div><img href="#" src="{{ asset('asset/img/') }}"></div>
-      <p>Some text about me in culpa qui officia deserunt mollit <a href="#">อ่านเพิ่มเติม...</a></p>
+      <b><p></p></b>
+      <div><img class="rounded-mx-auto" src="{{ asset('asset/img/title3.jpg') }}"></div>
+      <p>Some text about me in culpa qui officia deserunt mollit <a href="{{ action('PagesController@news4')}}">อ่านเพิ่มเติม...</a></p>
 
       <h3>Menu</h3>      
         <ul class="nav flex-column">

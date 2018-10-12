@@ -101,26 +101,6 @@
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label for="score">Score Red :</label>
-          <input type="text" class="form-control" name="score[]" value="{{ $schedule->teams->last()->pivot->score }}" id="score_red">          
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-4"></div>
-        <div class="form-group col-md-4">
-          <label for="status">Status Red :</label>
-          <select class="form-control" name="status[]" id="status_red">
-              <option value="default">กรุณาเลือกผลการแข่งขัน</option>          
-              <option value="win">Win</option>
-              <option value="lose">Lose</option>         
-          </select>     
-      </div>
-    </div>
-
-     <div class="row">
-      <div class="col-md-4"></div>
-        <div class="form-group col-md-4">
           <label for="team">Red Team :</label>
             <select class="form-control" name="team_id[]" id="redteam">
               @foreach($teams as $team)                
@@ -134,9 +114,28 @@
               @endforeach               
             </select>                
       </div>
+    </div>  
+
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="status">Status Red :</label>
+          <select class="form-control" name="status[]" id="status_red">
+              <option value="default">กรุณาเลือกผลการแข่งขัน</option>          
+              <option value="win">Win</option>
+              <option value="lose">Lose</option>         
+          </select>     
+      </div>
     </div>
 
-
+    <div class="row">
+      <div class="col-md-4"></div>
+        <div class="form-group col-md-4">
+          <label for="score">Score Red :</label>
+          <input type="text" class="form-control" name="score[]" value="{{ $schedule->teams->last()->pivot->score }}" id="score_red">          
+      </div>
+    </div>
+  
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4" style="margin-top:60px">

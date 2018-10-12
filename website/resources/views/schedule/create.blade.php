@@ -101,11 +101,15 @@
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label class="control-label" for="score">Score Red :</label>
-          <input type="text" class="form-control {{ $errors->has('score') ? 'is-invalid' : '' }}" name="score[]" value="{{ isset($data) ? old('score',$data->score) : old('score') }}" id="score_red">
-          @if($errors->has('score'))
-            <span class="invalid-feedback">กรุณากรอกคะแนน.</span>
-          @endif
+          <label class="control-label" for="team">Red Team :</label>
+            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="team_id[]" id="redteam">
+            @foreach($teams as $team)                
+              <option value="{{ $team->id }}">{{ $team->name }}</option>            
+            @endforeach               
+            </select>           
+            @if($errors->has('teams'))
+            <span class="invalid-feedback">กรุณาเลือกทีมฝ่ายสีแดง</span>
+            @endif
         </div>                
     </div>
 
@@ -127,15 +131,11 @@
     <div class="row">
       <div class="col-md-4"></div>
         <div class="form-group col-md-4">
-          <label class="control-label" for="team">Red Team :</label>
-            <select class="form-control {{ $errors->has('team') ? 'is-invalid' : '' }}" name="team_id[]" id="redteam">
-            @foreach($teams as $team)                
-              <option value="{{ $team->id }}">{{ $team->name }}</option>            
-            @endforeach               
-            </select>           
-            @if($errors->has('teams'))
-            <span class="invalid-feedback">กรุณาเลือกทีมฝ่ายสีแดง</span>
-            @endif
+          <label class="control-label" for="score">Score Red :</label>
+          <input type="text" class="form-control {{ $errors->has('score') ? 'is-invalid' : '' }}" name="score[]" value="{{ isset($data) ? old('score',$data->score) : old('score') }}" id="score_red">
+          @if($errors->has('score'))
+            <span class="invalid-feedback">กรุณากรอกคะแนน.</span>
+          @endif
         </div>                
     </div>
     
