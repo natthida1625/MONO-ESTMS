@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>ROV ARENA</title>
+  <title>Garena ROV</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -10,10 +10,10 @@
 </head>
 <body>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
+<!-- <div class="jumbotron text-center" style="margin-bottom:0">
 	<h1>Header</h1>
   	<p>Resize this responsive page to see the effect!</p> 
-</div>
+</div> -->
 
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

@@ -11167,6 +11167,7 @@ h3 {
   width: 50%;
   border-bottom: 1px solid #CCCCCC;
   border-top: 1px solid #DDDDDD;
+  margin-bottom: 0px;
 }
 
 .footer p {
@@ -11232,6 +11233,8 @@ h3 {
 .fakeimg {
   height: 200px;
   background: #aaa;
+  width: 100%;
+  padding: 20px;
 }
 
 * {
@@ -11244,15 +11247,6 @@ h3 {
 body {
   font-family: Arial;
   background: #f1f1f1;
-}
-
-/* Header/Blog Title */
-
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -11269,15 +11263,9 @@ body {
 
 .rightcolumn {
   float: right;
-  width: 30%;
+  width: 25%;
   height: 100%;
-}
-
-/* Fake image */
-
-.fakeimg {
-  width: 100%;
-  padding: 20px;
+  padding: 50px 0px 50px 0px;
 }
 
 /* Add a card effect for articles */
@@ -11287,23 +11275,6 @@ body {
   padding: 50px;
   margin: 50px 70px 25px 70px;
   height: 100%;
-}
-
-/* Clear floats after the columns */
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -11327,5 +11298,12 @@ body {
 .center {
   margin: auto;
   padding: 10px;
+}
+
+/* Make the image fully responsive */
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
 }
 

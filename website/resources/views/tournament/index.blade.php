@@ -7,19 +7,20 @@
       <p>{{ \Session::get('success') }}</p>
     </div><br />
   @endif
-     
-  <table class="table table-striped">
-  <h4>Tournaments List</h4>
-  <a href="{{ action('TournamentController@create')}}">Create Tournament </a><br /><br /> 
-    <thead>
-      <tr>
-        <th>Images</th>     
-        <th>ID</th>      
-        <th>Title</th>
-        <th>Description</th>
-        <th colspan="2"></th>
-      </tr>
-    </thead>
+  
+  <div class="table-responsive">
+    <table class="table table-striped">
+    <h4>Tournaments List</h4>
+    <a href="{{ action('TournamentController@create')}}">Create Tournament </a><br /><br /> 
+      <thead>
+        <tr>
+          <th>Images</th>     
+          <th>ID</th>      
+          <th>Title</th>
+          <th>Description</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
     <tbody>     
     @foreach($tournaments as $tournament)
     <tr>
@@ -38,7 +39,7 @@
     </tr>
     @endforeach
     </tbody>
-
-</table>
+    </table>
+  </div>  
 </div>
 @endsection

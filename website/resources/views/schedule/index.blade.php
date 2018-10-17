@@ -7,10 +7,11 @@
       <p>{{ \Session::get('success') }}</p>
     </div><br />
   @endif
-     
-  <table class="table table-striped">
-  <h4>Schedule List</h4>
-  <a href="{{ action('ScheduleController@create')}}">Create schedule </a><br /><br /> 
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+    <h4>Schedule List</h4>
+    <a href="{{ action('ScheduleController@create')}}">Create schedule </a><br /><br /> 
     <thead>
       <tr width="100%">
         <th>ID</th>             
@@ -54,7 +55,7 @@
     </tr>
     @endforeach
     </tbody>
-
-</table>
+    </table>
+  </div>  
 </div>
 @endsection

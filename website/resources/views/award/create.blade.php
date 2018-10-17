@@ -32,8 +32,8 @@
         <div class="form-group col-md-4" style="margin-top:60px">
           <button type="submit"  class="btn btn-success" style="margin-left:38px">Save</button>
         </div>
-      </div> 
-    </form>
-  </div>    
+    </div> 
+  </form>
+</div>    
 @endsection        
    

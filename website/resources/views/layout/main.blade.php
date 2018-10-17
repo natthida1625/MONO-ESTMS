@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>ROV ARENA</title>
+  <title>Garena ROV</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -9,13 +9,6 @@
 	<link rel="icon" type="image/png" href="{{ asset('asset/img/rov.png') }}" /> 
   </head>
 <body>
-
-<div class="jumbotron text-center" style="margin-bottom:0">
-	<h1>Header</h1>
-    <p>Resize this responsive page to see the effect!</p> 
-    <!-- <img class="navbar-logo" src="{{ asset('asset/img/') }}"> -->
-
-</div>
     
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -56,6 +49,12 @@
 </nav>
 <!-- /.navbar -->
 
+<!-- header -->
+<!-- <div>
+	<img class="navbar-logo" src="{{ asset('asset/img/header.jpg') }}"> 
+</div> -->
+<!-- /.header -->
+
 <!-- slide bar -->
 <div>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -64,17 +63,17 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
-  <!-- <div class="carousel-inner">
+  <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="{{ asset('asset/img/') }}" alt="First slide" height="700px" width="300px">
+      <img class="d-block w-100" src="{{ asset('asset/img/') }}" alt="First slide">
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{ asset('asset/img/') }}" alt="Second slide" height="700px" width="300px">
+      <img class="d-block w-100" src="{{ asset('asset/img/slide1.jpg') }}" alt="Second slide">
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{ asset('asset/img/') }}" alt="Third slide" height="700px" width="300px">
+      <img class="d-block w-100" src="{{ asset('asset/img/slide2.jpg') }}" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -85,7 +84,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div> -->
+</div>
 </div>
 <!-- slide bar -->
 
@@ -94,20 +93,7 @@
 <div class="container" style="margin-top:30px">
   <div class="row">
     <div class="col-sm-4 border">               
-      <br>   
-      <h3>News</h3>
-      <h6>ข่าวที่น่าสนใจ</h6><br/>
-      <b><p>ROV Pro League Season 2 ชิงรางวัลมูลค่ากว่า 6 ล้านบาท</p></b>
-      <div><img class="rounded-mx-auto" src="{{ asset('asset/img/title3.jpg') }}"></div><br/>
-      <p>หลังจากที่ประสบความสำเร็จกับรายการแข่งขันเกม ROV Pro League ในครั้งที่แล้ว ล่าสุด Garena 
-        ได้ประกาศ ROV Pro League Season 2 โดยความร่วมมือจากผู้สนับสนุนอีกมากมาย อาทิ TRUE, Yamaha และ Oppo 
-        มาร่วมเป็นส่วนหนึ่งของการแข่งขันครั้งนี้ เพื่อดึ่งอีสปอร์ตไทย ไปสู่ระดับโลก <a href="{{ action('PagesController@news3')}}">อ่านเพิ่มเติม...</a></p>	 
-
-      <br>   
-      <b><p></p></b>
-      <div><img class="rounded-mx-auto" src="{{ asset('asset/img/title3.jpg') }}"></div>
-      <p>Some text about me in culpa qui officia deserunt mollit <a href="{{ action('PagesController@news4')}}">อ่านเพิ่มเติม...</a></p>
-
+      <br>
       <h3>Menu</h3>      
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -117,6 +103,22 @@
             <a class="nav-link" href="#">ผลการแข่งขัน</a>
           </li>             
         </ul>
+        <br/>
+
+      <h3>News</h3>
+      <h6>ข่าวที่น่าสนใจ</h6><br/>
+      <b><p>ROV Pro League Season 2 ชิงรางวัลมูลค่ากว่า 6 ล้านบาท</p></b>
+      <div><img class="rounded-mx-auto" src="{{ asset('asset/img/title3.jpg') }}"></div><br/>
+      <p>หลังจากที่ประสบความสำเร็จกับรายการแข่งขันเกม ROV Pro League ในครั้งที่แล้ว ล่าสุด Garena 
+        ได้ประกาศ ROV Pro League Season 2 โดยความร่วมมือจากผู้สนับสนุนอีกมากมาย อาทิ TRUE, Yamaha และ Oppo 
+        มาร่วมเป็นส่วนหนึ่งของการแข่งขันครั้งนี้ เพื่อดึ่งอีสปอร์ตไทย ไปสู่ระดับโลก <a href="{{ action('PagesController@news3')}}">อ่านเพิ่มเติม...</a></p>	 
+
+      <br>   
+      <b><p>เปิดตัว ฮีโร่ตัวใหม่สายแครี่ พร้อมแนวทางการเล่น</p></b>
+      <div><img class="rounded-mx-auto" src="{{ asset('asset/img/title4.jpg') }}"></div><br/>
+      <p>" บางครั้งความตายก็อาจจะไม่ได้น่ากลัวสักเท่าไหร่ เพราะบางคนก็อาจจะตายโดยไม่ทันได้กลัว "<br/>
+      Elsu ฮีโร่สายแครี่ ผู้ที่ได้ขึ้นชื่อว่าเป็นสไนเปอร์ประจำเกม สามารถซุ่มยิงฮีโร่จากนอกวงไฟต์ได้สบายๆ นอกจากนี้ Passive 
+      ของเขายังเอื้อต่อหน้าที่ในการทำหน้าที่สไนเปอร์ได้ดีเยี่ยมอีกด้วย <a href="{{ action('PagesController@news4')}}">อ่านเพิ่มเติม...</a></p>      
     </div>    
 
 

@@ -7,10 +7,11 @@
       <p>{{ \Session::get('success') }}</p>
     </div><br />
   @endif
-     
-  <table class="table table-striped">
-  <h4>Players List</h4>
-  <a href="{{ action('PlayerController@create')}}">Create Player</a><br /><br /> 
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+    <h4>Players List</h4>
+    <a href="{{ action('PlayerController@create')}}">Create Player</a><br /><br /> 
     <div>
       <form action="/search" method="get">
       <div class="form-inline my-2 my-lg-0">
@@ -56,7 +57,7 @@
     </tr>
     @endforeach
     </tbody>
-
-</table>
+    </table>
+  </div>
 </div>
 @endsection

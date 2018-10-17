@@ -408,15 +408,10 @@
     </div> 
   </div>  
 
-  <div class="rightcolumn">        
-    <div class="card">
-    <div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/') }}"><br/></div>
-      <p>โดย Mono News, October 3, 2018</p>
-      <b>Clone Wars สงครามร่างเหมือน</b>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เกม MOBA ในมือถือสุดฮิตอย่าง ROV จากค่าย Garena ได้มีการอัพเดตเกมซึ่งตอนนี้ได้มีการปรับ Patch ใหม่ โดยการปรับสมดุลของเกมให้มากขึ้น 
-         รวมถึงมีการเพิ่มความสามารถและลดความสามารถของฮีโร่บางตัวในเกม ใครอยากรู้ว่าฮีโร่ตัวใดบ้างที่มีการเปลี่ยนแปลง...มาดูกันเลย
-      </p> 
-    </div>  
-  </div>
+  <div class="rightcolumn">    
+    <div align="center"><a href="https://www.facebook.com/ROVTH/"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion.jpg') }}"><br/><br/></div>     
+    <div align="center"><a href="https://www.facebook.com/ROVTH/"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion1.jpg') }}"><br/><br/></div>
+    <div align="center"><a href="https://www.facebook.com/ROVTH/"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion2.jpg') }}"><br/><br/></div>
+  </div>    
 </div>  
 @endsection
