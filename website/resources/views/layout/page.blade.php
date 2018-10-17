@@ -55,9 +55,7 @@
 <!-- /.navbar -->
 
 <!-- content -->
-	<div>
-	@yield('content')
-	</div>
+@yield('content')
 <!--/.content -->
 
   </div>

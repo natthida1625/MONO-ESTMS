@@ -409,9 +409,9 @@
   </div>  
 
   <div class="rightcolumn">    
-    <div align="center"><a href="https://www.facebook.com/ROVTH/"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion.jpg') }}"><br/><br/></div>     
-    <div align="center"><a href="https://www.facebook.com/ROVTH/"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion1.jpg') }}"><br/><br/></div>
-    <div align="center"><a href="https://www.facebook.com/ROVTH/"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion2.jpg') }}"><br/><br/></div>
-  </div>    
+    <div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion.jpg') }}"><br/><br/></div>     
+    <div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion1.jpg') }}"><br/><br/></div>
+    <div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion2.jpg') }}"><br/><br/></div>
+  </div>   
 </div>  
 @endsection

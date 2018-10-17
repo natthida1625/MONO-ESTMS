@@ -13,11 +13,10 @@
 
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<img class="navbar-logo" href="#" src="{{ asset('asset/img/logo_en.png') }}">
+	<img class="navbar-logo" href="#" src="{{ asset('asset/img/logo_en.png') }}">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon"></span>
   	</button>
-
   	<div class="collapse navbar-collapse" id="navbarSupportedContent">
     	<ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -51,13 +50,15 @@
 <!-- /.navbar -->
 
 <!-- content -->
-@yield('content')       
+	@yield('content')       
 <!--/.content -->
 
 <!--footer -->
+<footer>
 <div class="jumbotron text-center" style="margin-bottom:0">
   <p>Footer</p>
 </div>
+</footer>
  <!--/.footer-->
 
 </div>

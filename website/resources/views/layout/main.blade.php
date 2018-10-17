@@ -56,7 +56,7 @@
 <!-- /.header -->
 
 <!-- slide bar -->
-<div>
+<!--<div>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -65,7 +65,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="{{ asset('asset/img/') }}" alt="First slide">
+      <img class="d-block w-100" src="{{ asset('asset/img/slide.jpg') }}" alt="First slide">
     </div>
 
     <div class="carousel-item">
@@ -85,7 +85,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-</div>
+</div>-->
 <!-- slide bar -->
 
 

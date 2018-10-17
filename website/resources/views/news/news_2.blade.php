@@ -26,9 +26,15 @@
       <p>เห็นแบบนี้แล้ว อย่าลืมมาสมัครเพื่อแข่งขันในรายการ RoV Pro League Qualifiers Season 2 เพื่อเป็น 1 ในนักกีฬามืออาชีพ และสามารถติดตามรายละเอียดเพิ่มเติมได้ที่ Facebook Fanpage : Garena RoV Thailand</p>
       <p>ขอบคุณเครดิตข้อมูลจาก: Garena ROV Thailand</p>
       <div class="center">
-        <iframe width="560" height="400"  src="https://www.youtube.com/embed/J0cxV5qdh_w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/J0cxV5qdh_w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div> 
+  </div>  
+
+  <div class="rightcolumn">    
+    <div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion.jpg') }}"><br/><br/></div>     
+    <div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion1.jpg') }}"><br/><br/></div>
+    <div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/promotion2.jpg') }}"><br/><br/></div>
   </div>  
 </div>  
 @endsection
