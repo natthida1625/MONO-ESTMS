@@ -45,9 +45,9 @@
             </ul>
             <p>ขอบคุณเครดิตข้อมูลจาก: Garena ROV Thailand</p>
         </p>   
-      <div class="center">
-        <iframe width="560" height="400"  src="https://www.youtube.com/embed/S2O6v2CE9Ew" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>         
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/S2O6v2CE9Ew" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>         
     </div> 
   </div>  
 

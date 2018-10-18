@@ -4,6 +4,7 @@
   <title>Garena ROV</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<link rel="icon" type="image/png" href="{{ asset('asset/img/rov.png') }}" /> 
@@ -40,7 +41,15 @@
       		<li class="nav-item">
         		<a class="nav-link" href="{{ url('/award/index') }}">Award</a>
       		</li>
-    	</ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Program
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{{ url('/program') }}">ROV Tournament Pro Legue</a>
+            </div>
+          </li>
+        </ul>
     <form class="form-inline my-2 my-lg-0">
       	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -94,19 +103,6 @@
   <div class="row">
     <div class="col-sm-4 border">               
       <br>
-      <h3>Menu</h3>      
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="{{ url('/program') }}">โปรแกรมการแข่งขัน</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">ผลการแข่งขัน</a>
-          </li>             
-        </ul>
-        <br/>
-
-      <h3>News</h3>
-      <h6>ข่าวที่น่าสนใจ</h6><br/>
       <b><p>ROV Pro League Season 2 ชิงรางวัลมูลค่ากว่า 6 ล้านบาท</p></b>
       <div><img class="rounded-mx-auto" src="{{ asset('asset/img/title3.jpg') }}"></div><br/>
       <p>หลังจากที่ประสบความสำเร็จกับรายการแข่งขันเกม ROV Pro League ในครั้งที่แล้ว ล่าสุด Garena 
@@ -126,20 +122,19 @@
 	<div class="col-sm-8">	
 	@yield('content')
 	</div>
-	<!--/.content -->
-      
+	<!--/.content -->      
   </div>
 </div>
 <!--/.main-content -->
-
+<br/>
 
 <!--footer -->
 <footer>
 <div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Footer</p>
+<img class="navbar-logo" href="#" src="{{ asset('asset/img/logo_en.png') }}">
 </div>
- <!--/.footer-->
 </footer>
+ <!--/.footer-->
 
 </div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

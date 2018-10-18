@@ -3,7 +3,8 @@
 <head>
   <title>Garena ROV</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -40,6 +41,14 @@
       		<li class="nav-item">
         		<a class="nav-link" href="{{ url('/award/index') }}">Award</a>
       		</li>
+			  <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Program
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{{ url('/program') }}">ROV Tournament Pro Legue</a>
+            </div>
+          </li>  
     	</ul>
     	<form class="form-inline my-2 my-lg-0">
       	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -56,7 +65,7 @@
 <!--footer -->
 <footer>
 <div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Footer</p>
+<img class="navbar-logo" href="#" src="{{ asset('asset/img/logo_en.png') }}">
 </div>
 </footer>
  <!--/.footer-->

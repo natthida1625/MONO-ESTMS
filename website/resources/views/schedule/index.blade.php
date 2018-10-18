@@ -11,7 +11,7 @@
   <div class="table-responsive">
     <table class="table table-striped">
     <h4>Schedule List</h4>
-    <a href="{{ action('ScheduleController@create')}}">Create schedule </a><br /><br /> 
+    <a href="{{ action('ScheduleController@create')}}">Create Schedule </a><br /><br /> 
     <thead>
       <tr width="100%">
         <th>ID</th>             
