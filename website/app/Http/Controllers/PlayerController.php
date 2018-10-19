@@ -35,7 +35,7 @@ class PlayerController extends Controller
     {
         $search = $request->get('search');
         $players = Player::where('firstname', 'like', '%' .$search. '%')
-             ->orwhere('lastname', 'like', '%' .$search. '%')->paginate(5);
+             ->orwhere('charactername', 'like', '%' .$search. '%')->paginate(5);
         return view('player/index',compact('search','players'));
     }
     /**

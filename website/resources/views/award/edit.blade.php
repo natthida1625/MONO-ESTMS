@@ -5,7 +5,7 @@
   <form method="post" action="{{action('AwardController@update' , $id)}}" enctype="multipart/form-data">
     @csrf
     <h4>Edit Award</h4>
-    <input name="id" type="hidden" value="">
+    <input name="id" type="hidden" value="{{ $award->id }}">
     <input name="_method" type="hidden" value="PATCH">
 
     <div class="row">

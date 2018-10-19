@@ -11,7 +11,7 @@
           <label class="control-label" for="title">Title:</label>
           <input type="text" class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" name="title" value="{{ isset($data) ? old('title',$data->title) : old('title') }}">
           @if($errors->has('title'))
-            <span class="invalid-feedback">กรุณากรอกชื่อการแข่งขัน</span>
+            <span class="invalid-feedback">กรุณากรอกชื่อรางวัลการแข่งขัน</span>
           @endif
         </div>
     </div>
@@ -22,7 +22,7 @@
           <label class="control-label" for="description">Description:</label>
           <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" value="{{ isset($data) ? old('description',$data->description) : old('description') }}" type="textarea" maxlength="140" rows="7"></textarea>
           @if($errors->has('description'))
-            <span class="invalid-feedback">กรุณากรอกชื่อการแข่งขัน</span>
+            <span class="invalid-feedback">กรุณากรอกรายละเอียดรางวัลการแข่งขัน</span>
           @endif
         </div>
     </div>

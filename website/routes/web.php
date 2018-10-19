@@ -15,9 +15,11 @@ Route::get('/', 'PagesController@index');
 
 Route::get('/welcome', 'PagesController@index');
 
-Route::get('/program', 'ProgramController@index');
+Route::get('/program', 'ProgramController@program');
 
-Route::get('news/news', 'PagesController@news');
+Route::get('/program_1', 'ProgramController@program1');
+
+Route::get('/news', 'PagesController@news');
 
 Route::get('/news_1', 'PagesController@news1');
 

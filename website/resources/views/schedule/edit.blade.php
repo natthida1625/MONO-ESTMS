@@ -83,7 +83,7 @@
         <div class="form-group col-md-4">
           <label for="status">Status Blue :</label>
           <select class="form-control" name="status[]" id="status_blue">
-              <option value="default">กรุณาเลือกผลการแข่งขัน</option>          
+              <option value="">กรุณาเลือกผลการแข่งขัน</option>          
               <option value="win">Win</option>
               <option value="lose">Lose</option>  
           </select>        
@@ -121,7 +121,7 @@
         <div class="form-group col-md-4">
           <label for="status">Status Red :</label>
           <select class="form-control" name="status[]" id="status_red">
-              <option value="default">กรุณาเลือกผลการแข่งขัน</option>          
+              <option value="">กรุณาเลือกผลการแข่งขัน</option>          
               <option value="win">Win</option>
               <option value="lose">Lose</option>         
           </select>     

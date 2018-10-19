@@ -47,6 +47,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="{{ url('/program') }}">ROV Tournament Pro Legue</a>
+              <a class="dropdown-item" href="{{ url('/program_1') }}">ROV Tournament Road Glory</a>
             </div>
           </li>
         </ul>
@@ -131,7 +132,7 @@
 <!--footer -->
 <footer>
 <div class="jumbotron text-center" style="margin-bottom:0">
-<img class="navbar-logo" href="#" src="{{ asset('asset/img/logo_en.png') }}">
+<img class="navbar-logo" href="#" src="{{ asset('asset/img/Garena_logo.png') }}">
 </div>
 </footer>
  <!--/.footer-->

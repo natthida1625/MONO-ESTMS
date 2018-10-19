@@ -23,7 +23,7 @@
           <label class="control-label" for="description">Description:</label>
           <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" value="{{ isset($data) ? old('description',$data->description) : old('description') }}" type="textarea" maxlength="500" rows="10"></textarea>
           @if($errors->has('description'))
-          <span class="invalid-feedback">กรุณาใส่รายละเอียดเกี่ยวกับการแข่งขัน</span>
+          <span class="invalid-feedback">กรุณากรอกรายละเอียดเกี่ยวกับการแข่งขัน</span>
           @endif
         </div>
     </div> 

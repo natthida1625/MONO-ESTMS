@@ -26,7 +26,7 @@
       <td>{{ $award->id}}</td>
       <td>{{ $award->title}}</td>  
       <td>{{ $award->description}}</td>
-      <td><a href="{{ action('AwardController@edit', $award['id'])}}" class="btn btn-primary">Edit</a><br /><br /></td>
+      <td><a href="{{ action('AwardController@edit', $award->id)}}" class="btn btn-primary">Edit</a><br /><br /></td>
       <td>
         <form method="post" action="{{action('AwardController@destroy', $award['id'])}}">
         @csrf

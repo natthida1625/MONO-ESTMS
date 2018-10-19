@@ -47,7 +47,9 @@ class ScheduleController extends Controller
             'date' => 'required',
             'time' => 'required',            
             'round_id' => 'required',
-            'tournament_id' => 'required'
+            'tournament_id' => 'required',
+            'score' => 'required',
+            'status' => 'required'
         ],[
              // 'required' => 'กรุณากรอก :attribute',
             // 'numeric' => 'กรุณากรอก :attribute เป็นตัวเลข',

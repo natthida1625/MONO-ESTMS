@@ -22,7 +22,7 @@
           <label class="control-label" for="round_number">Round number:</label>
           <input type="text" class="form-control {{ $errors->has('round_number') ? 'is-invalid' : '' }}" name="round_number" value="{{ isset($data) ? old('round_number',$data->round_number) : old('round_number') }}">
           @if($errors->has('round_number'))
-            <span class="invalid-feedback">กรุณากรอกจำนวนรอบการแข่งขัน.</span>         
+            <span class="invalid-feedback">กรุณากรอกรอบการแข่งขัน.</span>         
           @endif
         </div>
     </div>
