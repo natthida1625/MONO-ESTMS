@@ -36,7 +36,7 @@ h3 {
   background-color: #FAFAFA;
   padding: 10px 40px 60px;
   margin: 10px 0px 60px;
-  border: 1px solid GREY;
+  border: 10px solid rgb(0, 0, 0);
 }
 
 /* footer */
@@ -195,4 +195,15 @@ body {
   margin-bottom: 0;
   margin-top: 30px;
   background:rgb(19, 18, 18);
+}
+
+.border {
+  border-style: solid;
+  border-width: 5px;
+}
+
+.row {
+  .card{
+     margin-left: 130px;
+  }  
 }

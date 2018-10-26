@@ -24,6 +24,9 @@
         		<a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
       		</li>
           <li class="nav-item">
+        		<a class="nav-link" href="{{ url('/welcome') }}">News</a>
+	  		  </li>
+          <li class="nav-item">
         		<a class="nav-link" href="{{ url('/player/index') }}">Player</a>
 	  		  </li>
 					<li class="nav-item">
@@ -64,40 +67,6 @@
 	<img class="navbar-logo" src="{{ asset('asset/img/header.jpg') }}"> 
 </div> -->
 <!-- /.header -->
-
-<!-- slide bar -->
-<!--<div>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="{{ asset('asset/img/slide.jpg') }}" alt="First slide">
-    </div>
-
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{ asset('asset/img/slide1.jpg') }}" alt="Second slide">
-    </div>
-
-    <div class="carousel-item">
-      <img class="d-block w-100" src="{{ asset('asset/img/slide2.jpg') }}" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div>-->
-<!-- slide bar -->
-
 
 <!-- main-content -->
 <div class="container" style="margin-top:30px">

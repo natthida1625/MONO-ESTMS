@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('asset/img/rov.png') }}" /> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 <body>
 
@@ -63,23 +65,76 @@
   </div>
 </nav>
 <!-- /.navbar -->
-<br/>
 
-<div class="container">
+<!-- slide bar -->
+<div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{{ asset('asset/img/slide.jpg') }}" alt="First slide">
+    </div>
 
-  <h1>{{ $tournament->title }}</h1>
-  <h2>{{ $tournament->description }}</h2>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{ asset('asset/img/slide1.jpg') }}" alt="Second slide">
+    </div>
 
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{ asset('asset/img/slide2.jpg') }}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<!-- slide bar -->
 
+<div class="container"><br/>
+  <h1>Tournament Latest</h1><br/>
+  <div>
+    <div class="container-fluid">
+        <div class="row main align-items-center">
+            <div class="col-md-6 image-element align-center">   
+              <div align="center"><img class="rounded-mx-auto" src="{{ asset('asset/img/ROV Tournament Road Glory.jpg') }}" media-simple="true"></div>                
+            </div>
+            <div class="col-md-6 text-element">
+                <div class="text-content">                   
+                    <div class="mbr-section-text">
+                        <b>ROV Tournament Road Glory</b>
+                        <p class="mbr-text pt-3 mbr-light mbr-fonts-style align-center display-5">
+                        พบกับรายการการแข่งขันสุดยิ่งใหญ่ของเกม RoV สุดยอดเกม MOBA บนมือถือ ที่กระแสแรงที่สุดในขณะนี้ กับการแข่งขัน Road to Glory 
+                        ซึ่งมียอดเงินรางวัลรวมสูงถึง 3,000,000 บาท  เพื่อการันตีความเป็น 1 ในด้านของการแข่งขัน Mobile eSports ที่ใหญ่ที่สุดในประเทศไทย 
+                        </p>
+                    </div>
+                    <div class="mbr-section-btn pt-3 align-center">
+                        <a class="btn btn-md btn-primary display-4" href="{{ url('/news_5') }}">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>       
+</div>
+<br/><hr>
+  <h1>แผนผังโปรแกรมการแข่งขันล่าสุด</h1>
+  <h2>ROV Tournament Road Glory</h2>
+  
   <div class="tournament-bracket tournament-bracket--rounded">   
 
   @foreach($tournament->rounds as $rounds)
     
     <div class="tournament-bracket__round">
 
-
       <h3 class="tournament-bracket__round-title">{{ $rounds->title }}</h3>
-
 
       <ul class="tournament-bracket__list">
 
@@ -114,14 +169,83 @@
           </div>
         </li>
         @endforeach
-
       </ul>
-
-    </div>
-  
+    </div>  
   @endforeach
   </div>
+<br/>
+</div>
+<br/>
 
+<div>
+  <h1>ทีมที่เข้าร่วมการแข่งขัน</h1>
+  <div class="row" style="margin-right:0px">
+    <div class="card">
+      <img src="{{ asset('asset/img/alpha.png') }}" width="160px" height="160px"><br/>
+      <p align="center">ALPHA Red</p>
+    </div>
+
+    <div class="card">
+      <img src="{{ asset('asset/img/arctic wolf.png') }}" width="160px" height="160px"><br/>
+      <p align="center">Arctic Wolf</p>
+    </div>
+
+    <div class="card">
+      <img src="{{ asset('asset/img/Pupapaya.jpg') }}" width="160px" height="160px"><br/>
+      <p align="center">Pupapaya</p>
+    </div>
+
+    <div class="card">
+      <img src="{{ asset('asset/img/Bearmaster.jpg') }}" width="160px" height="160px"><br/>
+      <p align="center">Bearmaster</p>
+    </div>
+
+    <div class="card">
+      <img src="{{ asset('asset/img/Black forest.jpg') }}" width="160px" height="160px"><br/>
+      <p align="center">Black Forest</p>
+    </div>
+
+    <div class="card">
+      <img src="{{ asset('asset/img/hexen.jpg') }}" width="160px" height="160px"><br/>
+      <p align="center">Hexen</p>
+    </div>
+
+    <div class="card">
+      <img src="{{ asset('asset/img/Bazaar.png') }}" width="160px" height="160px"><br/>
+      <p align="center">Bazaar Gaming</p>
+    </div>
+
+    <div class="card">
+      <img src="{{ asset('asset/img/Evos.png') }}" width="160px" height="160px"><br/>
+      <p align="center">Evos Debut</p>
+    </div>
+  </div>
+</div>
+
+<!-- <div>
+  <h1>ทีมชนะเลิศการแข่งขัน</h1>
+  <div class="row" style="margin-right:0px">     
+    <div class="card"> 
+      <img src="{{ asset('asset/img/Pupapaya.jpg') }}" width="160px" height="160px"><br/>
+      <p align="center">Pupapaya</p>      
+    </div>
+  </div>  
+</div> -->
+
+<div class="w3-container">
+  <h2>Photo Card</h2>
+  <table align="center">
+    <tr>
+    <div class="w3-card-4" style="width:160px">
+      <td>
+        <img class="rounded mx-auto d-block" src="{{ asset('asset/img/Pupapaya.jpg') }}" width="160px" height="160px">
+        <div class="w3-container w3-center">
+          <p align="center">Pupapaya</p>
+        </div>
+      </td>
+    </div>
+    </tr>
+  </table>  
 </div>
 
 <!--footer -->

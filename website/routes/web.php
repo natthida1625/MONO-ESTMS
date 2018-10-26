@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'HighlightController@index');
 
 Route::get('/welcome', 'PagesController@index');
+
+Route::get('/highlight', 'HighlightController@index');
 
 Route::get('/program', 'ProgramController@program');
 
@@ -28,6 +30,8 @@ Route::get('/news_2', 'PagesController@news2');
 Route::get('/news_3', 'PagesController@news3');
 
 Route::get('/news_4', 'PagesController@news4');
+
+Route::get('/news_5', 'HighlightController@news5');
 
 Route::get('/search', 'PlayerController@search');
 

@@ -13,7 +13,7 @@ class ProgramController extends Controller
         return view('program',compact('tournament'));  
     }
 
-     public function program1() {
+    public function program1() {
         $tournament = Tournament::find(2);
         //dd($tournament->rounds);        
         return view('program_1',compact('tournament'));  
