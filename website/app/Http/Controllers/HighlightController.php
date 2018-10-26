@@ -10,6 +10,7 @@ class HighlightController extends Controller
 {
     public function index() {
         $tournament = Tournament::find(2);
+        $player = Player::find(2);
         //dd($tournament->rounds);        
         return view('highlight',compact('tournament'));  
     }
@@ -17,4 +18,5 @@ class HighlightController extends Controller
     public function news5() {
         return view('news.news_5');
     }
+    
 }

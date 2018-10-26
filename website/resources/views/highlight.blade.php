@@ -177,63 +177,109 @@
 </div>
 <br/>
 
-<div>
-  <h1>ทีมที่เข้าร่วมการแข่งขัน</h1>
-  <div class="row" style="margin-right:0px">
-    <div class="card">
-      <img src="{{ asset('asset/img/alpha.png') }}" width="160px" height="160px"><br/>
-      <p align="center">ALPHA Red</p>
-    </div>
+<!-- Blog -->
+<section class="blog bgwhite p-t-94 p-b-65">
+		<div class="container">
+			<div class="sec-title p-b-52">
+				<h2>ทีมที่เข้าร่วมการแข่งขัน</h2>
+			</div><br/>
 
-    <div class="card">
-      <img src="{{ asset('asset/img/arctic wolf.png') }}" width="160px" height="160px"><br/>
-      <p align="center">Arctic Wolf</p>
-    </div>
+			<div class="row">
+				<div class="col-sm-10 col-md-3 p-b-30 m-l-r-auto">
+					<div class="block">						
+            <div align="center"><img src="{{ asset('asset/img/alpha.png') }}" width="160px" height="170px" alt="ALPHA Red"></div>			
+						<div class="block-txt p-t-14 text-center"><br/>
+							<p>ALPHA Red</p>
+						</div>
+					</div>
+				</div>
 
-    <div class="card">
-      <img src="{{ asset('asset/img/Pupapaya.jpg') }}" width="160px" height="160px"><br/>
-      <p align="center">Pupapaya</p>
-    </div>
+				<div class="col-sm-10 col-md-3 p-b-30 m-l-r-auto">
+					<div class="block">					
+            <div align="center"><img src="{{ asset('asset/img/arctic wolf.png') }}" width="160px" height="170px" alt="Arctic Wolf"></div>				
+						<div class="block-txt p-t-14 text-center"><br/>
+              <p>Arctic Wolf</p>						
+						</div>
+					</div>
+				</div>
 
-    <div class="card">
-      <img src="{{ asset('asset/img/Bearmaster.jpg') }}" width="160px" height="160px"><br/>
-      <p align="center">Bearmaster</p>
-    </div>
+				<div class="col-sm-10 col-md-3 p-b-30 m-l-r-auto">
+					<div class="block">
+						<div align="center"><img src="{{ asset('asset/img/Pupapaya.jpg') }}" width="160px" height="170px" alt="Pupapaya"></div>
+						<div class="block3-txt p-t-14 text-center"><br/>
+							<p>Pupapaya</p>
+						</div>
+					</div>
+        </div>
 
-    <div class="card">
-      <img src="{{ asset('asset/img/Black forest.jpg') }}" width="160px" height="160px"><br/>
-      <p align="center">Black Forest</p>
-    </div>
+        <div class="col-sm-10 col-md-3 p-b-30 m-l-r-auto">
+					<div class="block">
+						<div align="center"><img src="{{ asset('asset/img/Bearmaster.jpg') }}" width="160px" height="170px" alt="Bearmaster"></div>
+						<div class="block-txt p-t-14 text-center"><br/>
+							<p>Bearmaster</p>
+						</div>
+					</div>
+        </div>
 
-    <div class="card">
-      <img src="{{ asset('asset/img/hexen.jpg') }}" width="160px" height="160px"><br/>
-      <p align="center">Hexen</p>
-    </div>
+        <div class="col-sm-10 col-md-3 p-b-30 m-l-r-auto">
+					<div class="block">
+						<div align="center"><img src="{{ asset('asset/img/Black forest.jpg') }}" width="160px" height="170px" alt="Black Forest"></div>
+						<div class="block-txt p-t-14 text-center"><br/>
+							<p>Black Forest</p>
+						</div>
+					</div>
+        </div>
 
-    <div class="card">
-      <img src="{{ asset('asset/img/Bazaar.png') }}" width="160px" height="160px"><br/>
-      <p align="center">Bazaar Gaming</p>
-    </div>
+        <div class="col-sm-10 col-md-3 p-b-30 m-l-r-auto">
+					<div class="block">
+						<div align="center"><img src="{{ asset('asset/img/hexen.jpg') }}" width="160px" height="170px" alt="Hexen"></div>
+						<div class="block-txt p-t-14 text-center"><br/>
+							<p>Hexen</p>
+						</div>
+					</div>
+        </div>
 
-    <div class="card">
-      <img src="{{ asset('asset/img/Evos.png') }}" width="160px" height="160px"><br/>
-      <p align="center">Evos Debut</p>
-    </div>
-  </div>
-</div>
+        <div class="col-sm-10 col-md-3 p-b-30 m-l-r-auto">
+					<div class="block">
+						<div align="center"><img src="{{ asset('asset/img/Bazaar.png') }}" width="160px" height="170px" alt="Bazaar Gaming"></div>
+						<div class="block-txt p-t-14 text-center"><br/>
+							<p>Bazaar Gaming</p>
+						</div>
+					</div>
+        </div>
 
-<!-- <div>
-  <h1>ทีมชนะเลิศการแข่งขัน</h1>
-  <div class="row" style="margin-right:0px">     
-    <div class="card"> 
-      <img src="{{ asset('asset/img/Pupapaya.jpg') }}" width="160px" height="160px"><br/>
-      <p align="center">Pupapaya</p>      
-    </div>
-  </div>  
-</div> -->
+        <div class="col-sm-10 col-md-3 p-b-30 m-l-r-auto">
+					<div class="block">
+						<div align="center"><img src="{{ asset('asset/img/Evos.png') }}" width="160px" height="170px" alt="Evos Debut"></div>
+						<div class="block-txt p-t-14 text-center"><br/>
+							<p>Evos Debut</p>
+						</div>
+					</div>
+        </div>        
+			</div>
+		</div>
+  </section>
+  
+  <section class="blog bgwhite p-t-94 p-b-65">
+		<div class="container">
+			<div class="sec-title p-b-52">
+				<h2>ทีมชนะเลิศการแข่งขัน</h2>
+      </div><br/>
+      <div class="col-sm-12 m-l-r-auto">
+					<div class="block">
+						<div align="center"><img src="{{ asset('asset/img/Pupapaya.jpg') }}" width="160px" height="170px" alt="Evos Debut"></div>
+						<div class="block-txt p-t-14 text-center"><br/>
+							<p>Evos Debut</p>
+						</div>
+					</div>
+        </div>        
+			</div>
+		</div>
+  </section>
 
-<div class="w3-container">
-  <h2>Photo Card</h2>
+
+<!-- <div class="w3-container">
+  <h2>ทีมชนะเลิศการแข่งขัน</h2>
   <table align="center">
     <tr>
     <div class="w3-card-4" style="width:160px">
@@ -246,7 +292,7 @@
     </div>
     </tr>
   </table>  
-</div>
+</div> -->
 
 <!--footer -->
 <footer>
